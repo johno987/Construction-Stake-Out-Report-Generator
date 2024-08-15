@@ -1,0 +1,16 @@
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.GenerateResource.cache
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.AssemblyInfoInputs.cache
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.AssemblyInfo.cs
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.CoreCompileInputs.cache
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.exe
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.deps.json
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.runtimeconfig.json
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.dll
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.pdb
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.dll
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\refint\StakeOutReport WinForms.dll
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.pdb
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.genruntimeconfig.cache
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\ref\StakeOutReport WinForms.dll
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport_WinForms.StakeOutReport.resources
