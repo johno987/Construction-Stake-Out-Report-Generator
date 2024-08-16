@@ -14,3 +14,7 @@ C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\Sta
 C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.genruntimeconfig.cache
 C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\ref\StakeOutReport WinForms.dll
 C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport_WinForms.StakeOutReport.resources
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.sourcelink.json
+C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\CsvHelper.dll
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.AssemblyReference.cache
+C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOut.69C584E0.Up2Date

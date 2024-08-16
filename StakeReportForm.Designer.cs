@@ -32,11 +32,12 @@ namespace StakeOutReport_WinForms
             TitleLabel = new Label();
             BrowseDesignDataLabel = new Label();
             label1 = new Label();
-            DesignDataFilePath = new TextBox();
-            AsBuiltDataFilePath = new TextBox();
+            DesignDataFilePathTextBox = new TextBox();
+            AsBuiltDataFilePathTextBox = new TextBox();
             BrowseDesignDataDialog = new OpenFileDialog();
             BrowseDesignDataButton = new Button();
             BrowseAsBuiltData = new Button();
+            ConfirmChoiceAndReadButton = new Button();
             SuspendLayout();
             // 
             // TitleLabel
@@ -69,19 +70,19 @@ namespace StakeOutReport_WinForms
             label1.TabIndex = 2;
             label1.Text = "Browse For As-Built Data:";
             // 
-            // DesignDataFilePath
+            // DesignDataFilePathTextBox
             // 
-            DesignDataFilePath.Location = new System.Drawing.Point(176, 88);
-            DesignDataFilePath.Name = "DesignDataFilePath";
-            DesignDataFilePath.Size = new Size(548, 23);
-            DesignDataFilePath.TabIndex = 3;
+            DesignDataFilePathTextBox.Location = new System.Drawing.Point(176, 88);
+            DesignDataFilePathTextBox.Name = "DesignDataFilePathTextBox";
+            DesignDataFilePathTextBox.Size = new Size(548, 23);
+            DesignDataFilePathTextBox.TabIndex = 3;
             // 
-            // AsBuiltDataFilePath
+            // AsBuiltDataFilePathTextBox
             // 
-            AsBuiltDataFilePath.Location = new System.Drawing.Point(176, 176);
-            AsBuiltDataFilePath.Name = "AsBuiltDataFilePath";
-            AsBuiltDataFilePath.Size = new Size(548, 23);
-            AsBuiltDataFilePath.TabIndex = 4;
+            AsBuiltDataFilePathTextBox.Location = new System.Drawing.Point(176, 176);
+            AsBuiltDataFilePathTextBox.Name = "AsBuiltDataFilePathTextBox";
+            AsBuiltDataFilePathTextBox.Size = new Size(548, 23);
+            AsBuiltDataFilePathTextBox.TabIndex = 4;
             // 
             // BrowseDesignDataDialog
             // 
@@ -105,18 +106,30 @@ namespace StakeOutReport_WinForms
             BrowseAsBuiltData.TabIndex = 6;
             BrowseAsBuiltData.Text = "Browse As-Built Data";
             BrowseAsBuiltData.UseVisualStyleBackColor = true;
-            BrowseAsBuiltData.Click += this.BrowseAsBuiltData_Click;
+            BrowseAsBuiltData.Click += BrowseAsBuiltData_Click;
+            // 
+            // ConfirmChoiceAndReadButton
+            // 
+            ConfirmChoiceAndReadButton.BackColor = Color.White;
+            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(672, 734);
+            ConfirmChoiceAndReadButton.Name = "ConfirmChoiceAndReadButton";
+            ConfirmChoiceAndReadButton.Size = new Size(174, 35);
+            ConfirmChoiceAndReadButton.TabIndex = 7;
+            ConfirmChoiceAndReadButton.Text = "Confirm Choice And Read";
+            ConfirmChoiceAndReadButton.UseVisualStyleBackColor = false;
+            ConfirmChoiceAndReadButton.Click += ConfirmChoiceAndReadButton_Click;
             // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(825, 458);
+            ClientSize = new Size(858, 781);
+            Controls.Add(ConfirmChoiceAndReadButton);
             Controls.Add(BrowseAsBuiltData);
             Controls.Add(BrowseDesignDataButton);
-            Controls.Add(AsBuiltDataFilePath);
-            Controls.Add(DesignDataFilePath);
+            Controls.Add(AsBuiltDataFilePathTextBox);
+            Controls.Add(DesignDataFilePathTextBox);
             Controls.Add(label1);
             Controls.Add(BrowseDesignDataLabel);
             Controls.Add(TitleLabel);
@@ -131,10 +144,11 @@ namespace StakeOutReport_WinForms
         private Label TitleLabel;
         private Label BrowseDesignDataLabel;
         private Label label1;
-        private TextBox DesignDataFilePath;
-        private TextBox AsBuiltDataFilePath;
+        private TextBox DesignDataFilePathTextBox;
+        private TextBox AsBuiltDataFilePathTextBox;
         private OpenFileDialog BrowseDesignDataDialog;
         private Button BrowseDesignDataButton;
         private Button BrowseAsBuiltData;
+        private Button ConfirmChoiceAndReadButton;
     }
 }
