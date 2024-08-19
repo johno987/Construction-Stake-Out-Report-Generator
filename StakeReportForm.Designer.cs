@@ -38,6 +38,7 @@ namespace StakeOutReport_WinForms
             BrowseDesignDataButton = new Button();
             BrowseAsBuiltData = new Button();
             ConfirmChoiceAndReadButton = new Button();
+            ReadStatusLabel = new Label();
             SuspendLayout();
             // 
             // TitleLabel
@@ -111,7 +112,7 @@ namespace StakeOutReport_WinForms
             // ConfirmChoiceAndReadButton
             // 
             ConfirmChoiceAndReadButton.BackColor = Color.White;
-            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(672, 734);
+            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(6, 241);
             ConfirmChoiceAndReadButton.Name = "ConfirmChoiceAndReadButton";
             ConfirmChoiceAndReadButton.Size = new Size(174, 35);
             ConfirmChoiceAndReadButton.TabIndex = 7;
@@ -119,12 +120,23 @@ namespace StakeOutReport_WinForms
             ConfirmChoiceAndReadButton.UseVisualStyleBackColor = false;
             ConfirmChoiceAndReadButton.Click += ConfirmChoiceAndReadButton_Click;
             // 
+            // ReadStatusLabel
+            // 
+            ReadStatusLabel.AutoSize = true;
+            ReadStatusLabel.Font = new Font("Segoe UI", 12F);
+            ReadStatusLabel.Location = new System.Drawing.Point(25, 300);
+            ReadStatusLabel.Name = "ReadStatusLabel";
+            ReadStatusLabel.Size = new Size(106, 21);
+            ReadStatusLabel.TabIndex = 8;
+            ReadStatusLabel.Text = "No Data Read";
+            // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(858, 781);
+            ClientSize = new Size(875, 693);
+            Controls.Add(ReadStatusLabel);
             Controls.Add(ConfirmChoiceAndReadButton);
             Controls.Add(BrowseAsBuiltData);
             Controls.Add(BrowseDesignDataButton);
@@ -150,5 +162,6 @@ namespace StakeOutReport_WinForms
         private Button BrowseDesignDataButton;
         private Button BrowseAsBuiltData;
         private Button ConfirmChoiceAndReadButton;
+        private Label ReadStatusLabel;
     }
 }
