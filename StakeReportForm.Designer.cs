@@ -39,6 +39,8 @@ namespace StakeOutReport_WinForms
             BrowseAsBuiltData = new Button();
             ConfirmChoiceAndReadButton = new Button();
             ReadStatusLabel = new Label();
+            DesignDataTable = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DesignDataTable).BeginInit();
             SuspendLayout();
             // 
             // TitleLabel
@@ -130,12 +132,27 @@ namespace StakeOutReport_WinForms
             ReadStatusLabel.TabIndex = 8;
             ReadStatusLabel.Text = "No Data Read";
             // 
+            // DesignDataTable
+            // 
+            DesignDataTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            DesignDataTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
+            DesignDataTable.BackgroundColor = Color.White;
+            DesignDataTable.BorderStyle = BorderStyle.Fixed3D;
+            DesignDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DesignDataTable.GridColor = Color.Black;
+            DesignDataTable.Location = new System.Drawing.Point(12, 367);
+            DesignDataTable.Name = "DesignDataTable";
+            DesignDataTable.ReadOnly = true;
+            DesignDataTable.Size = new Size(337, 212);
+            DesignDataTable.TabIndex = 9;
+            // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(875, 693);
+            ClientSize = new Size(901, 831);
+            Controls.Add(DesignDataTable);
             Controls.Add(ReadStatusLabel);
             Controls.Add(ConfirmChoiceAndReadButton);
             Controls.Add(BrowseAsBuiltData);
@@ -147,6 +164,7 @@ namespace StakeOutReport_WinForms
             Controls.Add(TitleLabel);
             Name = "StakeOutReport";
             Text = "Stake Out Report";
+            ((System.ComponentModel.ISupportInitialize)DesignDataTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +181,6 @@ namespace StakeOutReport_WinForms
         private Button BrowseAsBuiltData;
         private Button ConfirmChoiceAndReadButton;
         private Label ReadStatusLabel;
+        private DataGridView DesignDataTable;
     }
 }

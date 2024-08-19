@@ -1,4 +1,6 @@
-﻿namespace StakeOutReport_WinForms
+﻿using System.Data;
+
+namespace StakeOutReport_WinForms
 {
     public partial class StakeOutReport
     {
@@ -25,13 +27,28 @@
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
-                AsBuiltData = SortAsBuiltData.Sort(AsBuiltData);
+                AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the data into ascending order
+                populateTableData(successfullRead);
             }
             else
             {
                 ReadStatusLabel.Text = "Error In Reading Data";
                 ReadStatusLabel.BackColor = Color.Red;
+                populateTableData(successfullRead);
             }
+        }
+        private void populateTableData(bool successfulRead)
+        {
+            //get 1st 10 entries and read them in the table
+            if(successfulRead)
+            {
+                DesignDataTable.DataSource = DesignData.GetRange(0, 10);
+            }
+            else
+            {
+                DesignDataTable.DataSource = null;
+            }
+            
         }
     }
 }
