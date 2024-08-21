@@ -12,43 +12,38 @@ namespace StakeOutReport_WinForms
                 DesignData = CSVData.ReadDesignData(DesignDataFilePath);
                 AsBuiltData = CSVData.ReadAsBuiltData(AsBuiltDataFilePath);
             }
-            catch (Exception ex) //catches any errors in reading the data (empty, incorrect info etc)
+            catch (Exception ex) //catches any errors in reading the data (empty, incorrect info etc) will catch the bad read and advise the user the input file is bad
             {
                 SuccessfulRead = false;
                 MessageUser.SpawnMessageBox();
-            } //will catch the bad read and advise the user the input file is bad
+            } 
 
-            //now sort the asBuilt data that has been read in, pass it by reference
-            ChangeReadStatusLabelColour(SuccessfulRead);
+            //now sort the asBuilt data that has been read in
+            ChangeReadStatusLabelColourAndSortData(SuccessfulRead);
         }
-        private void ChangeReadStatusLabelColour(bool successfullRead)
+        private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
         {
             if (successfullRead) //if successful read, turn the label green and sort the data that has been read in
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
                 AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the data into ascending order
-                populateTableData(successfullRead);
+                populateDesignTablesData(successfullRead);
             }
             else
             {
                 ReadStatusLabel.Text = "Error In Reading Data";
                 ReadStatusLabel.BackColor = Color.Red;
-                populateTableData(successfullRead);
+                populateDesignTablesData(successfullRead);
             }
         }
-        private void populateTableData(bool successfulRead)
+        private void populateDesignTablesData(bool successfulRead) //preference at the min is to load all the data in for the preview and allow the user to scroll
         {
-            //get 1st 10 entries and read them in the table
-            if(successfulRead)
-            {
-                DesignDataTable.DataSource = DesignData.GetRange(0, 10);
-            }
-            else
-            {
-                DesignDataTable.DataSource = null;
-            }
-            
+            //DesignDataTable.DataSource = successfulRead ? DesignData.GetRange(0, 10) : null;
+            //AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData.GetRange(0, 10) : null;
+            DesignDataTable.DataSource = successfulRead ? DesignData : null;
+            AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData : null;
+            CalculateErrorButton.Visible = successfulRead ? true : false;
         }
     }
 }

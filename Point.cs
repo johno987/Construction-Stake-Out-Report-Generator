@@ -28,3 +28,24 @@
         return $"Point ID: {PointID,-10} \tEasting: {this.Easting,-10} \tNorthing: {this.Northing,-10} \tLevel: {this.Level}";
     }
 }
+
+public class PointError3D : Point //seperate class that adds on the error property
+{
+    public decimal? Error3D { get; init; }
+    public PointError3D(string id, decimal? east, decimal? north, decimal? height, decimal? Error)
+    {
+        PointID = id;
+        Easting = east;
+        Northing = north;
+        Level = height;
+        Error3D = Error;
+    }
+    public PointError3D(string doesNotExist)
+    {
+        PointID = doesNotExist;
+    }
+    public PointError3D()
+    {
+
+    }
+}

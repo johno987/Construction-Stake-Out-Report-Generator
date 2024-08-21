@@ -7,6 +7,9 @@
     <Compile Update="ConfirmDataReadButton.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SetCurrentDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="StakeReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
