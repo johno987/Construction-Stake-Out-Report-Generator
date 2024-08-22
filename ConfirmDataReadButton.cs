@@ -15,7 +15,7 @@ namespace StakeOutReport_WinForms
             catch (Exception ex) //catches any errors in reading the data (empty, incorrect info etc) will catch the bad read and advise the user the input file is bad
             {
                 SuccessfulRead = false;
-                MessageUser.SpawnMessageBox();
+                MessageUser.BadFileRead();
             } 
 
             //now sort the asBuilt data that has been read in
@@ -43,6 +43,8 @@ namespace StakeOutReport_WinForms
             //AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData.GetRange(0, 10) : null;
             DesignDataTable.DataSource = successfulRead ? DesignData : null;
             AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData : null;
+            ErrorPreviewDataTable.Visible = false;
+            ErrorPreviewLabel.Visible = false;
             CalculateErrorButton.Visible = successfulRead ? true : false;
         }
     }

@@ -1,4 +1,6 @@
-﻿public class Point
+﻿using CsvHelper.Configuration;
+
+public class Point
 {
     public string PointID { get; init; }
     public decimal? Easting { get; init; }

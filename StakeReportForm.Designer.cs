@@ -47,6 +47,9 @@ namespace StakeOutReport_WinForms
             CalculateErrorButton = new Button();
             ErrorPreviewLabel = new Label();
             ErrorPreviewDataTable = new DataGridView();
+            PrefixSelector = new ComboBox();
+            AsBuiltPrefixLabel = new Label();
+            CustomPrefixTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).BeginInit();
@@ -123,7 +126,7 @@ namespace StakeOutReport_WinForms
             // ConfirmChoiceAndReadButton
             // 
             ConfirmChoiceAndReadButton.BackColor = Color.White;
-            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(6, 241);
+            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(2, 348);
             ConfirmChoiceAndReadButton.Name = "ConfirmChoiceAndReadButton";
             ConfirmChoiceAndReadButton.Size = new Size(174, 35);
             ConfirmChoiceAndReadButton.TabIndex = 7;
@@ -135,7 +138,7 @@ namespace StakeOutReport_WinForms
             // 
             ReadStatusLabel.AutoSize = true;
             ReadStatusLabel.Font = new Font("Segoe UI", 12F);
-            ReadStatusLabel.Location = new System.Drawing.Point(25, 300);
+            ReadStatusLabel.Location = new System.Drawing.Point(21, 407);
             ReadStatusLabel.Name = "ReadStatusLabel";
             ReadStatusLabel.Size = new Size(106, 21);
             ReadStatusLabel.TabIndex = 8;
@@ -149,7 +152,7 @@ namespace StakeOutReport_WinForms
             DesignDataTable.BorderStyle = BorderStyle.Fixed3D;
             DesignDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DesignDataTable.GridColor = Color.Black;
-            DesignDataTable.Location = new System.Drawing.Point(12, 367);
+            DesignDataTable.Location = new System.Drawing.Point(831, 88);
             DesignDataTable.Name = "DesignDataTable";
             DesignDataTable.ReadOnly = true;
             DesignDataTable.Size = new Size(333, 199);
@@ -163,7 +166,7 @@ namespace StakeOutReport_WinForms
             AsBuiltDataTable.BorderStyle = BorderStyle.Fixed3D;
             AsBuiltDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AsBuiltDataTable.GridColor = Color.Black;
-            AsBuiltDataTable.Location = new System.Drawing.Point(362, 367);
+            AsBuiltDataTable.Location = new System.Drawing.Point(1181, 88);
             AsBuiltDataTable.Name = "AsBuiltDataTable";
             AsBuiltDataTable.ReadOnly = true;
             AsBuiltDataTable.Size = new Size(333, 199);
@@ -173,7 +176,7 @@ namespace StakeOutReport_WinForms
             // 
             DesignDataPreviewLabel.AutoSize = true;
             DesignDataPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            DesignDataPreviewLabel.Location = new System.Drawing.Point(12, 349);
+            DesignDataPreviewLabel.Location = new System.Drawing.Point(831, 70);
             DesignDataPreviewLabel.Name = "DesignDataPreviewLabel";
             DesignDataPreviewLabel.Size = new Size(114, 15);
             DesignDataPreviewLabel.TabIndex = 11;
@@ -184,7 +187,7 @@ namespace StakeOutReport_WinForms
             // 
             AsBuiltDataPreviewLabel.AutoSize = true;
             AsBuiltDataPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            AsBuiltDataPreviewLabel.Location = new System.Drawing.Point(362, 349);
+            AsBuiltDataPreviewLabel.Location = new System.Drawing.Point(1181, 70);
             AsBuiltDataPreviewLabel.Name = "AsBuiltDataPreviewLabel";
             AsBuiltDataPreviewLabel.Size = new Size(120, 15);
             AsBuiltDataPreviewLabel.TabIndex = 12;
@@ -195,7 +198,7 @@ namespace StakeOutReport_WinForms
             // 
             CurrentDate.AutoSize = true;
             CurrentDate.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            CurrentDate.Location = new System.Drawing.Point(750, 12);
+            CurrentDate.Location = new System.Drawing.Point(1448, 12);
             CurrentDate.Name = "CurrentDate";
             CurrentDate.Size = new Size(125, 20);
             CurrentDate.TabIndex = 13;
@@ -205,7 +208,7 @@ namespace StakeOutReport_WinForms
             // CalculateErrorButton
             // 
             CalculateErrorButton.BackColor = Color.White;
-            CalculateErrorButton.Location = new System.Drawing.Point(6, 584);
+            CalculateErrorButton.Location = new System.Drawing.Point(825, 305);
             CalculateErrorButton.Name = "CalculateErrorButton";
             CalculateErrorButton.Size = new Size(174, 35);
             CalculateErrorButton.TabIndex = 14;
@@ -218,7 +221,7 @@ namespace StakeOutReport_WinForms
             // 
             ErrorPreviewLabel.AutoSize = true;
             ErrorPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            ErrorPreviewLabel.Location = new System.Drawing.Point(362, 584);
+            ErrorPreviewLabel.Location = new System.Drawing.Point(831, 368);
             ErrorPreviewLabel.Name = "ErrorPreviewLabel";
             ErrorPreviewLabel.Size = new Size(76, 15);
             ErrorPreviewLabel.TabIndex = 16;
@@ -235,19 +238,51 @@ namespace StakeOutReport_WinForms
             ErrorPreviewDataTable.BorderStyle = BorderStyle.Fixed3D;
             ErrorPreviewDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ErrorPreviewDataTable.GridColor = Color.Black;
-            ErrorPreviewDataTable.Location = new System.Drawing.Point(362, 612);
+            ErrorPreviewDataTable.Location = new System.Drawing.Point(831, 396);
             ErrorPreviewDataTable.Name = "ErrorPreviewDataTable";
             ErrorPreviewDataTable.ReadOnly = true;
-            ErrorPreviewDataTable.Size = new Size(333, 199);
+            ErrorPreviewDataTable.Size = new Size(333, 276);
             ErrorPreviewDataTable.TabIndex = 15;
             ErrorPreviewDataTable.Visible = false;
+            // 
+            // PrefixSelector
+            // 
+            PrefixSelector.FormattingEnabled = true;
+            PrefixSelector.Location = new System.Drawing.Point(228, 231);
+            PrefixSelector.Name = "PrefixSelector";
+            PrefixSelector.Size = new Size(85, 23);
+            PrefixSelector.TabIndex = 17;
+            PrefixSelector.SelectedIndexChanged += PrefixSelector_SelectedIndexChanged;
+            // 
+            // AsBuiltPrefixLabel
+            // 
+            AsBuiltPrefixLabel.AutoSize = true;
+            AsBuiltPrefixLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            AsBuiltPrefixLabel.Location = new System.Drawing.Point(2, 233);
+            AsBuiltPrefixLabel.Name = "AsBuiltPrefixLabel";
+            AsBuiltPrefixLabel.Size = new Size(201, 16);
+            AsBuiltPrefixLabel.TabIndex = 18;
+            AsBuiltPrefixLabel.Text = "Define The As-Built Data Prefix";
+            // 
+            // CustomPrefixTextBox
+            // 
+            CustomPrefixTextBox.Location = new System.Drawing.Point(12, 281);
+            CustomPrefixTextBox.MaxLength = 10;
+            CustomPrefixTextBox.Name = "CustomPrefixTextBox";
+            CustomPrefixTextBox.Size = new Size(301, 23);
+            CustomPrefixTextBox.TabIndex = 19;
+            CustomPrefixTextBox.Visible = false;
+            CustomPrefixTextBox.TextChanged += CustomPrefixTextBox_TextChanged;
             // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(901, 864);
+            ClientSize = new Size(1619, 864);
+            Controls.Add(CustomPrefixTextBox);
+            Controls.Add(AsBuiltPrefixLabel);
+            Controls.Add(PrefixSelector);
             Controls.Add(ErrorPreviewLabel);
             Controls.Add(ErrorPreviewDataTable);
             Controls.Add(CalculateErrorButton);
@@ -266,7 +301,7 @@ namespace StakeOutReport_WinForms
             Controls.Add(BrowseDesignDataLabel);
             Controls.Add(TitleLabel);
             Name = "StakeOutReport";
-            Text = "Stake Out Report";
+            Text = "Stake Out Report Generator";
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).EndInit();
@@ -294,5 +329,8 @@ namespace StakeOutReport_WinForms
         private Button CalculateErrorButton;
         private Label ErrorPreviewLabel;
         private DataGridView ErrorPreviewDataTable;
+        private ComboBox PrefixSelector;
+        private Label AsBuiltPrefixLabel;
+        private TextBox CustomPrefixTextBox;
     }
 }
