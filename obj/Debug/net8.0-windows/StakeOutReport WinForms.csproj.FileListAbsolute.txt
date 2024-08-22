@@ -18,3 +18,23 @@ C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\Sta
 C:\Users\willj\source\repos\StakeOutReport WinForms\bin\Debug\net8.0-windows\CsvHelper.dll
 C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.AssemblyReference.cache
 C:\Users\willj\source\repos\StakeOutReport WinForms\obj\Debug\net8.0-windows\StakeOut.69C584E0.Up2Date
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.exe
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.deps.json
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.runtimeconfig.json
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.dll
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\StakeOutReport WinForms.pdb
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\bin\Debug\net8.0-windows\CsvHelper.dll
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.AssemblyReference.cache
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport_WinForms.StakeOutReport.resources
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.GenerateResource.cache
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.AssemblyInfoInputs.cache
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.AssemblyInfo.cs
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.csproj.CoreCompileInputs.cache
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.sourcelink.json
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOut.69C584E0.Up2Date
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.dll
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\refint\StakeOutReport WinForms.dll
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.pdb
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\StakeOutReport WinForms.genruntimeconfig.cache
+C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\obj\Debug\net8.0-windows\ref\StakeOutReport WinForms.dll

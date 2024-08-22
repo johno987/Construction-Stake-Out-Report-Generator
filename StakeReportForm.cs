@@ -40,13 +40,10 @@ namespace StakeOutReport_WinForms
             AsBuiltPrefixSelection = CustomPrefixTextBox.Text;
 
         }
-        private void ConfirmPrefix() //need to decide where this is called from
+        private bool ConfirmPrefix() //need to decide where this is called from
             //need a bool to set depending on whether the prefix matches the as built data
         {
-            if (!AsBuiltData[0].PointID.Contains(AsBuiltPrefixSelection))
-            {
-                MessageUser.BadDataPrefix();
-            }
+            return AsBuiltData[0].PointID.Contains(AsBuiltPrefixSelection);
         }
     }
 

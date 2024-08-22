@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StakeOutReport_WinForms
-build_property.ProjectDir = C:\Users\willj\source\repos\StakeOutReport WinForms\
+build_property.ProjectDir = C:\Users\Will Johnson\source\repos\StakeOutReportWinForms\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

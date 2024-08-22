@@ -23,7 +23,7 @@ namespace StakeOutReport_WinForms
         }
         private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
         {
-            if (successfullRead) //if successful read, turn the label green and sort the data that has been read in
+            if (successfullRead && ConfirmPrefix())//if successful read, turn the label green and sort the data that has been read in
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
@@ -34,7 +34,8 @@ namespace StakeOutReport_WinForms
             {
                 ReadStatusLabel.Text = "Error In Reading Data";
                 ReadStatusLabel.BackColor = Color.Red;
-                populateDesignTablesData(successfullRead);
+                MessageUser.BadDataPrefix();
+                populateDesignTablesData(!successfullRead);
             }
         }
         private void populateDesignTablesData(bool successfulRead) //preference at the min is to load all the data in for the preview and allow the user to scroll
