@@ -23,7 +23,8 @@ namespace StakeOutReport_WinForms
         }
         private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
         {
-            if (successfullRead && ConfirmPrefix())//if successful read, turn the label green and sort the data that has been read in
+            bool correctPrefix = ConfirmPrefix();
+            if (successfullRead && correctPrefix)//if successful read, turn the label green and sort the data that has been read in
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
@@ -34,7 +35,8 @@ namespace StakeOutReport_WinForms
             {
                 ReadStatusLabel.Text = "Error In Reading Data";
                 ReadStatusLabel.BackColor = Color.Red;
-                MessageUser.BadDataPrefix();
+                if(!correctPrefix)
+                    MessageUser.BadDataPrefix();
                 populateDesignTablesData(!successfullRead);
             }
         }

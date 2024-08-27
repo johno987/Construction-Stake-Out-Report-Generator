@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q55ym6AVUQw=",
+  "dgSpecHash": "xN1/mA/a3hg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\StakeOutReport WinForms.csproj",
+  "projectFilePath": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeOutReport WinForms.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Will Johnson\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
+    "C:\\Users\\willj\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
   ],
   "logs": []
 }
