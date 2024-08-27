@@ -29,6 +29,17 @@
             //display the message box
             result = MessageBox.Show(message, caption, buttons);
         }
+        public static void EmptyAsBuiltDataWarning()
+        {
+            //make the message variables to pass to the message box
+            string message = "As-Built data cannot be empty";
+            string caption = "Empty As-Built data collection";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            //display the message box
+            result = MessageBox.Show(message, caption, buttons);
+        }
     }
 
 }

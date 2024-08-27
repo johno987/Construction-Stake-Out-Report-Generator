@@ -5,7 +5,7 @@
         private void CalculateErrorButton_Click(object sender, EventArgs e) //if calculate error button has been pressed, we then calculate the error
         {
             bool SuccessfulErrorCalc = false;
-            try
+            try //can probably remove this try catch block
             {
                 //if ErrorInPoints is not empty (perhaps from previous read, empty it here first)
                 if (ErrorInPoints.Count > 0)
@@ -14,7 +14,7 @@
                 SuccessfulErrorCalc = true;
                 populateErrorTableData(SuccessfulErrorCalc);
             }
-            catch (Exception ex)
+            catch (Exception ex) //dont think this ever gets called 
             {
                 MessageUser.BadFileRead();
             }
@@ -71,7 +71,19 @@
             ErrorPreviewDataTable.Columns["Northing"].DisplayIndex = 2;
             ErrorPreviewDataTable.Columns["Level"].DisplayIndex = 3;
             ErrorPreviewDataTable.Columns["Error3D"].DisplayIndex = 4;
-        }
+            ReportOptionVisibility(SuccessfulErrorCalc);
 
+        }
+        private void ReportOptionVisibility(bool success)
+        {
+            ReportOptionsLabel.Visible = success ? true : false;
+            PDFCheckBox.Visible = success ? true : false;
+            CSVCheckBox.Visible = success ? true : false;
+            GenerateReportButton.Visible = success ? true : false;
+            ProjectNameLabel.Visible = success ? true : false;
+            ProjectNameTextBox.Visible = success ? true : false;
+            ElementOfWorksLabel.Visible = success ? true : false;
+            ElementOfWorksTextBox.Visible = success ? true : false;
+        }
     }
 }

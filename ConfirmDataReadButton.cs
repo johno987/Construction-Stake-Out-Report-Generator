@@ -16,20 +16,11 @@ namespace StakeOutReport_WinForms
             {
                 SuccessfulRead = false;
                 MessageUser.BadFileRead();
+                ReadStatusLabel.Text = "Error In Reading Data";
+                ReadStatusLabel.BackColor = Color.Red;
                 populateDesignTablesData(SuccessfulRead); //in this case sets them to null as the read failed
                 return;
             } 
-
-            //now sort the asBuilt data that has been read in
-
-            //if(SuccessfulRead)
-            //{
-            //    //ternary operators here for readstatus label
-            //    ReadStatusLabel.Text = "Data Successfully Read";
-            //    ReadStatusLabel.BackColor = Color.Green;
-            //    AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the As Built data into ascending order
-            //    populateDesignTablesData(SuccessfulRead);
-            //}
 
             ChangeReadStatusLabelColourAndSortData(SuccessfulRead);
         }
@@ -54,13 +45,20 @@ namespace StakeOutReport_WinForms
         }
         private void populateDesignTablesData(bool successfulRead) //preference at the min is to load all the data in for the preview and allow the user to scroll
         {
-            //DesignDataTable.DataSource = successfulRead ? DesignData.GetRange(0, 10) : null;
-            //AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData.GetRange(0, 10) : null;
+            //THIS FUNCTION NEEDS REFACTORING AND SPLITTIG UP
             DesignDataTable.DataSource = successfulRead ? DesignData : null;
             AsBuiltDataTable.DataSource = successfulRead ? AsBuiltData : null;
             ErrorPreviewDataTable.Visible = false;
             ErrorPreviewLabel.Visible = false;
+            ReportOptionsLabel.Visible = false;
+            PDFCheckBox.Visible = false;
+            CSVCheckBox.Visible = false;
+            GenerateReportButton.Visible = false;
             CalculateErrorButton.Visible = successfulRead ? true : false;
+            ElementOfWorksLabel.Visible = false;
+            ElementOfWorksTextBox.Visible = false;
+
+            //ReportOptionVisibility(successfulRead);
         }
     }
 }

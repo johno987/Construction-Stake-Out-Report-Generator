@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\messageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:messageuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\prefixselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:prefixselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\calculateerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:calculateerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\willj\\source\\repos\\stakeoutreport winforms\\csvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 904,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "StakeReportForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeReportForm.cs",
               "RelativeDocumentMoniker": "StakeReportForm.cs",
@@ -51,32 +55,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MessageUser.cs",
-              "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\MessageUser.cs",
-              "RelativeDocumentMoniker": "MessageUser.cs",
-              "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\MessageUser.cs",
-              "RelativeToolTip": "MessageUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "StakeReportForm.cs",
+              "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeReportForm.cs",
+              "RelativeDocumentMoniker": "StakeReportForm.cs",
+              "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeReportForm.cs",
+              "RelativeToolTip": "StakeReportForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T21:56:30.185Z"
+              "WhenOpened": "2024-08-27T20:55:36.576Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ConfirmDataReadButton.cs",
               "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\ConfirmDataReadButton.cs",
               "RelativeDocumentMoniker": "ConfirmDataReadButton.cs",
               "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\ConfirmDataReadButton.cs",
               "RelativeToolTip": "ConfirmDataReadButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAANAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowD4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T20:40:34.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CSVData.cs",
               "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\CSVData.cs",
               "RelativeDocumentMoniker": "CSVData.cs",
@@ -95,14 +100,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StakeReportForm.cs",
-              "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeReportForm.cs",
-              "RelativeDocumentMoniker": "StakeReportForm.cs",
-              "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeReportForm.cs",
-              "RelativeToolTip": "StakeReportForm.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAAAIAAAA",
+              "Title": "PrefixSelector.cs",
+              "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\PrefixSelector.cs",
+              "RelativeDocumentMoniker": "PrefixSelector.cs",
+              "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\PrefixSelector.cs",
+              "RelativeToolTip": "PrefixSelector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T20:42:17.549Z",
+              "WhenOpened": "2024-08-27T20:56:04.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CalculateError.cs",
+              "DocumentMoniker": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\CalculateError.cs",
+              "RelativeDocumentMoniker": "CalculateError.cs",
+              "ToolTip": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\CalculateError.cs",
+              "RelativeToolTip": "CalculateError.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAowFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T20:42:57.493Z",
               "EditorCaption": ""
             }
           ]

@@ -16,34 +16,21 @@ namespace StakeOutReport_WinForms
             SetCurrentDate();
             InitialiseComboBox();
         }
-
-        private void InitialiseComboBox()
+        private void GenerateReportButton_Click(object sender, EventArgs e)
         {
-            PrefixSelector.DropDownStyle = ComboBoxStyle.DropDownList;
-            PrefixSelector.TabIndex = 0;
-            string[] choices = ["STKE", "Custom"];
-            PrefixSelector.Items.AddRange(choices);
-            PrefixSelector.SelectedIndex = 0;
-        }
+            //UP TO THE BUTTON CLICK FOR THE REPORT
 
-        private void PrefixSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            AsBuiltPrefixSelection = PrefixSelector.Text; //stores the selected prefix within the string variable
-            //spawn text box to enter custom selection
-            CustomPrefixTextBox.Visible = AsBuiltPrefixSelection == "Custom" ? true : false;
+            //CHECK WHICH CHECKBOXES ARE CHECKED
+            //IF PDF -> MAKE PDF REPORT
+            //IF CSV -> MAKE CSV REPORT
+            //OR BOTH
 
-        }
+            //APPEND ALL DATA TABLES
+            //APPEND JOB TITLE
+            //APPEND ELEMENT OF WORKS
+            //APPEND THE DATE AND TIME THE REPORT WAS MADE
 
-        private void CustomPrefixTextBox_TextChanged(object sender, EventArgs e)
-        {
-            //Here, we assign the custom prefix to the string variable
-            AsBuiltPrefixSelection = CustomPrefixTextBox.Text;
-
-        }
-        private bool ConfirmPrefix() //need to decide where this is called from
-            //need a bool to set depending on whether the prefix matches the as built data
-        {
-            return AsBuiltData[0].PointID.Contains(AsBuiltPrefixSelection);
+            //EVENTUALLY MAKE IT SO THE LEVEL CAN BE OMITTED FROM THE 3D ERROR (PILING PINS FOR EXAMPLE)
         }
     }
 

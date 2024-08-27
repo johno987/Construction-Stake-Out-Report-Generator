@@ -10,6 +10,9 @@
     <Compile Update="ConfirmDataReadButton.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PrefixSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SetCurrentDate.cs">
       <SubType>Form</SubType>
     </Compile>
