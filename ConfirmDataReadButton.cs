@@ -16,9 +16,21 @@ namespace StakeOutReport_WinForms
             {
                 SuccessfulRead = false;
                 MessageUser.BadFileRead();
+                populateDesignTablesData(SuccessfulRead); //in this case sets them to null as the read failed
+                return;
             } 
 
             //now sort the asBuilt data that has been read in
+
+            //if(SuccessfulRead)
+            //{
+            //    //ternary operators here for readstatus label
+            //    ReadStatusLabel.Text = "Data Successfully Read";
+            //    ReadStatusLabel.BackColor = Color.Green;
+            //    AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the As Built data into ascending order
+            //    populateDesignTablesData(SuccessfulRead);
+            //}
+
             ChangeReadStatusLabelColourAndSortData(SuccessfulRead);
         }
         private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
