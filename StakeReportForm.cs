@@ -1,4 +1,5 @@
 using CsvHelper;
+using CsvHelper.Configuration;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
@@ -56,13 +57,23 @@ namespace StakeOutReport_WinForms
         private void GenerateCSVReport()
         {
             SaveFileDialog CSVFile = new SaveFileDialog();
-            CSVFile.Filter = "CSV Files(*.csv) | *.csv";
+            CSVFile.Filter = "CSV Files(*.csv)|*.csv";
             CSVFile.Title = "Save a CSV file";
             CSVFile.ShowDialog();
+            CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                InjectionOptions = InjectionOptions.Strip
+            };
+
             using (var writer = new StreamWriter(CSVFile.FileName))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(ErrorWith3D);
+                csv.WriteRecords(DesignData);
+                csv.WriteRecords(AsBuiltData);
+
+                writer.Flush(); //ensures all data is flushes to the file
+                
             }
               
         }

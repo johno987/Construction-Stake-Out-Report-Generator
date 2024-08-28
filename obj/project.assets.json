@@ -53,24 +53,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\willj\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Will Johnson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeOutReport WinForms.csproj",
+      "projectUniqueName": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\StakeOutReport WinForms.csproj",
       "projectName": "StakeOutReport WinForms",
-      "projectPath": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\StakeOutReport WinForms.csproj",
-      "packagesPath": "C:\\Users\\willj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willj\\source\\repos\\StakeOutReport WinForms\\obj\\",
+      "projectPath": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\StakeOutReport WinForms.csproj",
+      "packagesPath": "C:\\Users\\Will Johnson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\willj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Will Johnson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -125,7 +120,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
