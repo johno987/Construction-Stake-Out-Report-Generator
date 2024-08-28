@@ -2,10 +2,10 @@
 
 namespace StakeOutReport_WinForms
 {
-    internal class SortAsBuiltData //class soley responsible for sorting the AsBuiltData
+    internal static class SortAsBuiltData //class soley responsible for sorting the AsBuiltData
     {
         //sort the data points by numerical ascending
-        public static List<Point> Sort(List<Point> points)
+        public static List<Point> Sort(List<Point> points) //no longer needed, keep for time being
         {
            points = points.OrderBy(p => ExtractNumber(p.PointID))
                 .ThenBy(p => p.PointID)
@@ -15,6 +15,12 @@ namespace StakeOutReport_WinForms
         private static int ExtractNumber(string s)
         {
             return int.Parse(string.Concat(s.Where(char.IsDigit)));
+        }
+
+        public static List<Point> SortExtension(this List<Point> points)
+        {
+            return points.OrderBy(p => ExtractNumber(p.PointID))
+                .ThenBy(p => p.PointID).ToList();
         }
     }
 

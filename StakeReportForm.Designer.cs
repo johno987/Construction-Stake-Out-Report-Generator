@@ -29,6 +29,7 @@ namespace StakeOutReport_WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StakeOutReport));
             TitleLabel = new Label();
             BrowseDesignDataLabel = new Label();
             label1 = new Label();
@@ -344,6 +345,7 @@ namespace StakeOutReport_WinForms
             ProjectNameTextBox.Size = new Size(489, 23);
             ProjectNameTextBox.TabIndex = 25;
             ProjectNameTextBox.Visible = false;
+            ProjectNameTextBox.TextChanged += ProjectNameTextBox_TextChanged;
             // 
             // ProjectNameLabel
             // 
@@ -365,6 +367,7 @@ namespace StakeOutReport_WinForms
             ElementOfWorksTextBox.Size = new Size(489, 23);
             ElementOfWorksTextBox.TabIndex = 27;
             ElementOfWorksTextBox.Visible = false;
+            ElementOfWorksTextBox.TextChanged += ElementOfWorksTextBox_TextChanged;
             // 
             // ElementOfWorksLabel
             // 
@@ -383,7 +386,7 @@ namespace StakeOutReport_WinForms
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1619, 900);
+            ClientSize = new Size(1572, 761);
             Controls.Add(ElementOfWorksTextBox);
             Controls.Add(ElementOfWorksLabel);
             Controls.Add(ProjectNameTextBox);
@@ -412,6 +415,7 @@ namespace StakeOutReport_WinForms
             Controls.Add(label1);
             Controls.Add(BrowseDesignDataLabel);
             Controls.Add(TitleLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "StakeOutReport";
             Text = "Stake Out Report Generator";
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).EndInit();

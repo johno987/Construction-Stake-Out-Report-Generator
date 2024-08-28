@@ -31,7 +31,8 @@ namespace StakeOutReport_WinForms
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
-                AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the data into ascending order
+                AsBuiltData = AsBuiltData.SortExtension(); //sort the data using the extension method
+                //AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the data into ascending order
                 populateDesignTablesData(successfullRead);
             }
             else
@@ -55,6 +56,8 @@ namespace StakeOutReport_WinForms
             CSVCheckBox.Visible = false;
             GenerateReportButton.Visible = false;
             CalculateErrorButton.Visible = successfulRead ? true : false;
+            ProjectNameLabel.Visible = false;
+            ProjectNameTextBox.Visible = false;
             ElementOfWorksLabel.Visible = false;
             ElementOfWorksTextBox.Visible = false;
 

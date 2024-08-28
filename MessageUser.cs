@@ -40,6 +40,17 @@
             //display the message box
             result = MessageBox.Show(message, caption, buttons);
         }
+        public static void EmptyReportSelection()
+        {
+            //make the message variables to pass to the message box
+            string message = "No report format has been selected";
+            string caption = "Null report selection";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            //display the message box
+            result = MessageBox.Show(message, caption, buttons);
+        }
     }
 
 }
