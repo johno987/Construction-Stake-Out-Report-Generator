@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StakeOutReport WinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+897363c7f2d917fc898c2910332aa9b9c08699dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76e72ff8e372aa92f2067a6c0cc8221d38d2860b")]
 [assembly: System.Reflection.AssemblyProductAttribute("StakeOutReport WinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StakeOutReport WinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

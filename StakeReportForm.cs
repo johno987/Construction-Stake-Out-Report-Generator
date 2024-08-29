@@ -69,11 +69,9 @@ namespace StakeOutReport_WinForms
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(ErrorWith3D);
-                csv.WriteRecords(DesignData);
-                csv.WriteRecords(AsBuiltData);
 
                 writer.Flush(); //ensures all data is flushes to the file
-                
+                 
             }
               
         }
