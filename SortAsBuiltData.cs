@@ -12,9 +12,15 @@ namespace StakeOutReport_WinForms
                 .ToList();
             return points;
         }
-        private static int ExtractNumber(string s)
+        private static int? ExtractNumber(string s)
         {
-            return int.Parse(string.Concat(s.Where(char.IsDigit)));
+            //add parse check to weed on control points and set ups
+            
+            if(int.TryParse(string.Concat(s.Where(char.IsDigit)), out int result))
+                return result;
+            return null;
+            //if (int.TryParse(string.Concat(s.Where(char.IsDigit));
+            //return int.Parse(string.Concat(s.Where(char.IsDigit)));
         }
 
         public static List<Point> SortExtension(this List<Point> points)
