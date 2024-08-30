@@ -26,13 +26,16 @@ namespace StakeOutReport_WinForms
         }
         private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
         {
+            AsBuiltData = RemoveControlPoints();
             bool correctPrefix = ConfirmPrefix();
             if (successfullRead && correctPrefix)//if successful read, turn the label green and sort the data that has been read in
             {
                 ReadStatusLabel.Text = "Data Successfully Read";
                 ReadStatusLabel.BackColor = Color.Green;
                 AsBuiltData = AsBuiltData.SortExtension(); //sort the data using the extension method
-                //AsBuiltData = SortAsBuiltData.Sort(AsBuiltData); //sort the data into ascending order
+                //ould sanitise the data here and remove any point that is not contained within the 
+                //original design data
+
                 populateDesignTablesData(successfullRead);
             }
             else
@@ -63,5 +66,32 @@ namespace StakeOutReport_WinForms
 
             //ReportOptionVisibility(successfulRead);
         }
+        private List<Point> RemoveControlPoints()
+        {
+            // Create lists of point IDs for AsBuiltData and DesignData
+            var asBuiltIDList = AsBuiltData.Select(x => x.PointID);
+            var designIDList = DesignData.Select(x => x.PointID);
+
+            // Filter AsBuiltData to include only those points whose PointID exists in DesignData
+            var sanitisedPoints = AsBuiltData
+                .Where(asBuiltPoint => designIDList.Contains(RemovePrefix(asBuiltPoint.PointID, AsBuiltPrefixSelection)))
+                .ToList();
+
+            return sanitisedPoints;
+        }
+
+        // Helper method to remove the prefix from PointID
+        private string RemovePrefix(string pointID, string prefix)
+        {
+            if (pointID.StartsWith(prefix))
+            {
+                return pointID.Substring(prefix.Length);
+            }
+            return pointID;
+        }
     }
+
+
+
+    
 }
