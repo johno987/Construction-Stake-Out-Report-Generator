@@ -66,7 +66,8 @@ namespace StakeOutReport_WinForms
 
             //ReportOptionVisibility(successfulRead);
         }
-        private List<Point> RemoveControlPoints()
+        private List<Point> RemoveControlPoints() //removes control points and set up data from the 
+            //as built data set
         {
             // Create lists of point IDs for AsBuiltData and DesignData
             var asBuiltIDList = AsBuiltData.Select(x => x.PointID);
