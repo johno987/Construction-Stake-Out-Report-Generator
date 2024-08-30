@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\browsefiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:browsefiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:stakereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\csvdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|solutionrelative:confirmdatareadbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E2BEA5-90F0-4D64-9441-CD9763B95037}|StakeOutReport WinForms.csproj|c:\\users\\will johnson\\source\\repos\\stakeoutreportwinforms\\calculateerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 904,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,15 +103,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ConfirmDataReadButton.cs",
               "DocumentMoniker": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\ConfirmDataReadButton.cs",
               "RelativeDocumentMoniker": "ConfirmDataReadButton.cs",
               "ToolTip": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\ConfirmDataReadButton.cs",
               "RelativeToolTip": "ConfirmDataReadButton.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAABAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwEIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T20:40:34.137Z"
+              "WhenOpened": "2024-08-19T20:40:34.137Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -121,7 +122,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SortAsBuiltData.cs",
               "DocumentMoniker": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\SortAsBuiltData.cs",
               "RelativeDocumentMoniker": "SortAsBuiltData.cs",
@@ -133,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Point.cs",
               "DocumentMoniker": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\Point.cs",
               "RelativeDocumentMoniker": "Point.cs",
@@ -145,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CSVData.cs",
               "DocumentMoniker": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\CSVData.cs",
               "RelativeDocumentMoniker": "CSVData.cs",
@@ -153,8 +154,7 @@
               "RelativeToolTip": "CSVData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T20:40:05.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T20:40:05.997Z"
             },
             {
               "$type": "Document",
@@ -170,13 +170,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StakeReportForm.cs",
               "DocumentMoniker": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\StakeReportForm.cs",
               "RelativeDocumentMoniker": "StakeReportForm.cs",
               "ToolTip": "C:\\Users\\Will Johnson\\source\\repos\\StakeOutReportWinForms\\StakeReportForm.cs",
               "RelativeToolTip": "StakeReportForm.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAYwDcAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwDcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T16:09:05.438Z",
               "EditorCaption": ""
