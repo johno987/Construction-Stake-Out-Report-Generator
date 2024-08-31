@@ -5,6 +5,9 @@ using System.Runtime.CompilerServices;
 using ClosedXML;
 using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
+using System.Data;
+using System.Reflection;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace StakeOutReport_WinForms
 {
@@ -195,6 +198,34 @@ namespace StakeOutReport_WinForms
                 var tableHeaders = worksheet.Range("A4:O4");
                 tableHeaders.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
+                //write the table data into the corresponding ranges
+                //this works, however does not respect the property indexes when writing to the file
+                var errorRange = worksheet.Cell("A5").InsertData(ErrorWith3D);
+
+                //need to swap 1st and last column
+                var Col1RangeData = worksheet.Range($"A5:A{5 + ErrorWith3D.Count}");
+                var Col5RangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count}");
+
+                var targetCell = worksheet.Cell("A5");
+                var targetCell2 = worksheet.Cell("E5");
+
+                Col5RangeData.CopyTo(targetCell);
+                Col1RangeData.CopyTo(targetCell2);
+                //worksheet.Cells($"A5:A{5 + ErrorWith3D.Count}").Value = Col5RangeData;
+
+                var DesignRange = worksheet.Cell("G5").InsertData(DesignData);
+                var AsBuiltRange = worksheet.Cell("L5").InsertData(AsBuiltData);
+
+                //trying with the datatable approach as these already exist
+                //var error3DRange = worksheet.Cell("A5").InsertData(ErrorPreviewDataTable.AsEnumerble());
+                //var errorDataTable = ErrorWith3D.ToDataTable();
+                //var designDataTable = DesignData.ToDataTable();
+                //var asBuiltDataTable = AsBuiltData.ToDataTable();
+
+                //var error3DRange = worksheet.Cell("A5").InsertData(errorDataTable.AsEnumerable());
+                //var DesignDataRange = worksheet.Cell("G5").InsertData(designDataTable.AsEnumerable());
+                //var AsBuiltDataRange = worksheet.Cell("L5").InsertData(asBuiltDataTable.AsEnumerable());
+
                 // Save the workbook
                 workbook.SaveAs(filePath);
             }
@@ -207,6 +238,32 @@ namespace StakeOutReport_WinForms
         private void ElementOfWorksTextBox_TextChanged(object sender, EventArgs e)
         {
             ElementOfWorks = ElementOfWorksTextBox.Text;
+        }
+    }
+
+    internal static class ListToDataTable
+    {
+        public static DataTable ToDataTable<T>(this List<T> points) //extension to list
+        {
+            DataTable dataTable = new DataTable(typeof(T).Name);
+            //get properties of each list type
+            PropertyInfo[] properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            //use the properties as the columns
+            foreach(var property in properties)
+            {
+                dataTable.Columns.Add(property.Name);
+            }
+            //insert values of properties into the data table
+            foreach(T item in points)
+            {
+                var values = new object[properties.Length];
+                for(int i = 0; i < properties.Length; i++)
+                {
+                    values[i] = properties[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            return dataTable;
         }
     }
 

@@ -29,7 +29,6 @@ public class Point
         Northing = north;
         Level = height;
     }
-
     public override string ToString()
     {
         return $"Point ID: {PointID,-10} \tEasting: {this.Easting,-10} \tNorthing: {this.Northing,-10} \tLevel: {this.Level}";
@@ -38,6 +37,7 @@ public class Point
 
 public class PointError3D : Point //seperate class that adds on the error property
 {
+
     [Index(4)]
     public decimal? Error3D { get; init; }
     public PointError3D(string id, decimal? east, decimal? north, decimal? height, decimal? Error)
