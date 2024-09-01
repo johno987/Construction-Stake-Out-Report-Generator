@@ -191,40 +191,86 @@ namespace StakeOutReport_WinForms
                 var headerRange = worksheet.Range("A1:D1");
                 headerRange.Style.Font.Bold = true;
 
-                var subHeaderRange = worksheet.Range("A3:L3");
+                var subHeaderRange = worksheet.Range("A3:O4");
                 subHeaderRange.Style.Font.Bold = true;
                 subHeaderRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
-                var tableHeaders = worksheet.Range("A4:O4");
-                tableHeaders.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                //var tableHeaders = worksheet.Range("A4:O4");
+                //tableHeaders.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
-                //write the table data into the corresponding ranges
-                //this works, however does not respect the property indexes when writing to the file
+                
+                //WRITE THE DATA TO THE TABLES
                 var errorRange = worksheet.Cell("A5").InsertData(ErrorWith3D);
-
-                //need to swap 1st and last column
-                var Col1RangeData = worksheet.Range($"A5:A{5 + ErrorWith3D.Count}");
-                var Col5RangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count}");
-
-                var targetCell = worksheet.Cell("A5");
-                var targetCell2 = worksheet.Cell("E5");
-
-                Col5RangeData.CopyTo(targetCell);
-                Col1RangeData.CopyTo(targetCell2);
-                //worksheet.Cells($"A5:A{5 + ErrorWith3D.Count}").Value = Col5RangeData;
-
                 var DesignRange = worksheet.Cell("G5").InsertData(DesignData);
                 var AsBuiltRange = worksheet.Cell("L5").InsertData(AsBuiltData);
 
-                //trying with the datatable approach as these already exist
-                //var error3DRange = worksheet.Cell("A5").InsertData(ErrorPreviewDataTable.AsEnumerble());
-                //var errorDataTable = ErrorWith3D.ToDataTable();
-                //var designDataTable = DesignData.ToDataTable();
-                //var asBuiltDataTable = AsBuiltData.ToDataTable();
 
-                //var error3DRange = worksheet.Cell("A5").InsertData(errorDataTable.AsEnumerable());
-                //var DesignDataRange = worksheet.Cell("G5").InsertData(designDataTable.AsEnumerable());
-                //var AsBuiltDataRange = worksheet.Cell("L5").InsertData(asBuiltDataTable.AsEnumerable());
+
+                //NEED TO REORDER THE FIRST TABLE SHOWING THE ERROR
+                #region ReorderingColumns
+                var ColARangeData = worksheet.Range($"A5:A{5 + ErrorWith3D.Count}");
+                var ColBRangeData = worksheet.Range($"B5:B{5 + ErrorWith3D.Count}");
+                var ColCRangeData = worksheet.Range($"C5:C{5 + ErrorWith3D.Count}");
+                var ColDRangeData = worksheet.Range($"D5:D{5 + ErrorWith3D.Count}");
+                var ColERangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count}");
+
+                var targetCellA = worksheet.Cell("A5"); //col A
+                var targetCellB = worksheet.Cell("B5"); //col B 
+                var targetCellC = worksheet.Cell("C5"); //Col C
+                var targetCellD = worksheet.Cell("D5"); //col D 
+                var targetCellE = worksheet.Cell("E5"); //col E
+
+                //COPY THE DATA OUTSIDE THE RANGE OF THE WORKSHEET
+
+                var targetCellR = worksheet.Cell("R5"); //col R
+                var targetCellS = worksheet.Cell("S5"); //col S 
+                var targetCellT = worksheet.Cell("T5"); //Col T
+                var targetCellU = worksheet.Cell("U5"); //col U 
+                var targetCellV = worksheet.Cell("V5"); //col V
+
+                ColBRangeData.CopyTo(targetCellR);
+                ColARangeData.CopyTo(targetCellV);
+                ColCRangeData.CopyTo(targetCellS);
+                ColDRangeData.CopyTo(targetCellT);
+                ColERangeData.CopyTo(targetCellU);
+
+                //NOW MOVE IT BACK INTO THE CORRECT CELLS FROM TABLE 1
+                var ColRRangeData = worksheet.Range($"R5:R{5 + ErrorWith3D.Count}");
+                var ColSRangeData = worksheet.Range($"S5:S{5 + ErrorWith3D.Count}");
+                var ColTRangeData = worksheet.Range($"T5:T{5 + ErrorWith3D.Count}");
+                var ColURangeData = worksheet.Range($"U5:U{5 + ErrorWith3D.Count}");
+                var ColVRangeData = worksheet.Range($"V5:V{5 + ErrorWith3D.Count}");
+
+                ColRRangeData.CopyTo(targetCellA);
+                ColSRangeData.CopyTo(targetCellB);
+                ColTRangeData.CopyTo(targetCellC);
+                ColURangeData.CopyTo(targetCellD);
+                ColVRangeData.CopyTo(targetCellE);
+
+                //NOW DELETE THE TEMPORARY STORAGE COLUMNS
+                ColRRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+                ColSRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+                ColTRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+                ColURangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+                ColVRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+
+                #endregion;
+
+
+                //ADD BORDERS TO THE TABLES
+                errorRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                errorRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+
+                DesignRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                DesignRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+
+                AsBuiltRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                AsBuiltRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+
+                //CENTRE THE TEXT FOR THE TABLES
+                errorRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                DesignRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                AsBuiltRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
                 // Save the workbook
                 workbook.SaveAs(filePath);
@@ -240,31 +286,4 @@ namespace StakeOutReport_WinForms
             ElementOfWorks = ElementOfWorksTextBox.Text;
         }
     }
-
-    internal static class ListToDataTable
-    {
-        public static DataTable ToDataTable<T>(this List<T> points) //extension to list
-        {
-            DataTable dataTable = new DataTable(typeof(T).Name);
-            //get properties of each list type
-            PropertyInfo[] properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            //use the properties as the columns
-            foreach(var property in properties)
-            {
-                dataTable.Columns.Add(property.Name);
-            }
-            //insert values of properties into the data table
-            foreach(T item in points)
-            {
-                var values = new object[properties.Length];
-                for(int i = 0; i < properties.Length; i++)
-                {
-                    values[i] = properties[i].GetValue(item, null);
-                }
-                dataTable.Rows.Add(values);
-            }
-            return dataTable;
-        }
-    }
-
 }
