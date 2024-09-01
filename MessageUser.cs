@@ -9,7 +9,9 @@
                     "PointID\n" +
                     "Easting\n" +
                     "Northing\n" +
-                    "Elevation";
+                    "Elevation\n" +
+                    "With no headers";
+
             string caption = "Error detected in the file selection";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;

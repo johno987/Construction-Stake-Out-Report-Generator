@@ -42,6 +42,7 @@
                 Northing = baseItem.Northing,
                 Level = baseItem.Level,
                 Error3D = Calculate3DError(baseItem)
+                //Error3D = Error2DCheckbox.Checked ? Calculate2DError : Calculate3DError(baseItem)
             }).ToList();
         }
         private Point CalculateAndReturnDifference(Point A, Point B)
