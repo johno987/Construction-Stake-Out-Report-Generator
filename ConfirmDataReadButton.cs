@@ -59,6 +59,7 @@ namespace StakeOutReport_WinForms
             CSVCheckBox.Visible = false;
             GenerateReportButton.Visible = false;
             CalculateErrorButton.Visible = successfulRead ? true : false;
+            Error2DCheckBox.Visible = successfulRead ? true : false;
             ProjectNameLabel.Visible = false;
             ProjectNameTextBox.Visible = false;
             ElementOfWorksLabel.Visible = false;

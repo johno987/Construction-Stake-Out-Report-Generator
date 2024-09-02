@@ -39,14 +39,14 @@ public class PointError3D : Point //seperate class that adds on the error proper
 {
 
     [Index(4)]
-    public decimal? Error3D { get; init; }
+    public decimal? Error { get; init; }
     public PointError3D(string id, decimal? east, decimal? north, decimal? height, decimal? Error)
     {
         PointID = id;
         Easting = east;
         Northing = north;
         Level = height;
-        Error3D = Error;
+        this.Error = Error;
     }
     public PointError3D(string doesNotExist)
     {

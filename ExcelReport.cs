@@ -68,12 +68,16 @@ namespace StakeOutReport_WinForms
                     worksheet.Cell("L3").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
                     // Add sub-headers
-                    string[] subHeaders = { "Point ID", "Difference in Easting", "Difference in Northing", "Difference in Elevation", "3D Error" };
+                    string[] subHeaders3D = { "Point ID", "Difference in Easting", "Difference in Northing", "Difference in Elevation", "3D Error" };
+                    string[] subHeaders2D = { "Point ID", "Difference in Easting", "Difference in Northing", "Difference in Elevation", "2D Error" };
                     string[] subHeadersWithoutError = { "Point ID", "Easting", "Northing", "Elevation" };
-                    for (int i = 0; i < subHeaders.Length; i++)
+
+                    for (int i = 0; i < subHeaders3D.Length; i++)
                     {
-                        worksheet.Cell(4, i + 1).Value = subHeaders[i];
+                        //if 2d error only, use the 2d headers, else use the 3d headers
+                        worksheet.Cell(4, i + 1).Value = Error2DCheckBox.Checked ? subHeaders2D[i] : subHeaders3D[i];
                     }
+
                     for (int i = 0; i < subHeadersWithoutError.Length; i++)
                     {
                         worksheet.Cell(4, i + 7).Value = subHeadersWithoutError[i];
@@ -176,6 +180,15 @@ namespace StakeOutReport_WinForms
                     ColTRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
                     ColURangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
                     ColVRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+
+
+                    //PERHAPS IMPLEMENT THIS FURTHER SO IT REMOVES THE ELEVATION COLUMN IF THE 2D ERROR OPTION IS SELCTED
+
+                    //if(Error2DCheckBox.Checked) //TEMP
+                    //{
+                    //    var ElevationRange = worksheet.Range($"D4:D{4 + ErrorWith3D.Count}");
+                    //    ElevationRange.Delete(XLShiftDeletedCells.ShiftCellsLeft);
+                    //}
 
                     #endregion;
 

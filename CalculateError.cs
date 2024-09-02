@@ -41,8 +41,9 @@
                 Easting = baseItem.Easting,
                 Northing = baseItem.Northing,
                 Level = baseItem.Level,
-                Error3D = Calculate3DError(baseItem)
-                //Error3D = Error2DCheckbox.Checked ? Calculate2DError : Calculate3DError(baseItem)
+                //Error3D = Calculate3DError(baseItem)
+                Error = Error2DCheckBox.Checked ? Calculate2DError(baseItem) : Calculate3DError(baseItem) //if it is checked
+                //only the easting and northings will be considered
             }).ToList();
         }
         private Point CalculateAndReturnDifference(Point A, Point B)
@@ -81,7 +82,8 @@
             ErrorPreviewDataTable.Columns["Easting"].DisplayIndex = 1;
             ErrorPreviewDataTable.Columns["Northing"].DisplayIndex = 2;
             ErrorPreviewDataTable.Columns["Level"].DisplayIndex = 3;
-            ErrorPreviewDataTable.Columns["Error3D"].DisplayIndex = 4;
+            ErrorPreviewDataTable.Columns["Error"].DisplayIndex = 4;
+
             ReportOptionVisibility(SuccessfulErrorCalc);
 
         }

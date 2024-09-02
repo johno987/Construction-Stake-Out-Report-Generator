@@ -59,6 +59,7 @@ namespace StakeOutReport_WinForms
             ProjectNameLabel = new Label();
             ElementOfWorksTextBox = new TextBox();
             ElementOfWorksLabel = new Label();
+            Error2DCheckBox = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).BeginInit();
@@ -146,10 +147,10 @@ namespace StakeOutReport_WinForms
             // ReadStatusLabel
             // 
             ReadStatusLabel.AutoSize = true;
-            ReadStatusLabel.Font = new Font("Segoe UI", 12F);
+            ReadStatusLabel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ReadStatusLabel.Location = new System.Drawing.Point(21, 407);
             ReadStatusLabel.Name = "ReadStatusLabel";
-            ReadStatusLabel.Size = new Size(106, 21);
+            ReadStatusLabel.Size = new Size(108, 18);
             ReadStatusLabel.TabIndex = 8;
             ReadStatusLabel.Text = "No Data Read";
             // 
@@ -219,7 +220,7 @@ namespace StakeOutReport_WinForms
             // CalculateErrorButton
             // 
             CalculateErrorButton.BackColor = Color.White;
-            CalculateErrorButton.Location = new System.Drawing.Point(831, 305);
+            CalculateErrorButton.Location = new System.Drawing.Point(831, 312);
             CalculateErrorButton.Name = "CalculateErrorButton";
             CalculateErrorButton.Size = new Size(174, 35);
             CalculateErrorButton.TabIndex = 14;
@@ -291,10 +292,10 @@ namespace StakeOutReport_WinForms
             // 
             PDFCheckBox.AutoSize = true;
             PDFCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            PDFCheckBox.Font = new Font("Arial Narrow", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PDFCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PDFCheckBox.Location = new System.Drawing.Point(21, 506);
             PDFCheckBox.Name = "PDFCheckBox";
-            PDFCheckBox.Size = new Size(48, 20);
+            PDFCheckBox.Size = new Size(52, 20);
             PDFCheckBox.TabIndex = 20;
             PDFCheckBox.Text = "PDF";
             PDFCheckBox.UseVisualStyleBackColor = true;
@@ -315,10 +316,10 @@ namespace StakeOutReport_WinForms
             // 
             CSVCheckBox.AutoSize = true;
             CSVCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            CSVCheckBox.Font = new Font("Arial Narrow", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CSVCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CSVCheckBox.Location = new System.Drawing.Point(21, 548);
             CSVCheckBox.Name = "CSVCheckBox";
-            CSVCheckBox.Size = new Size(48, 20);
+            CSVCheckBox.Size = new Size(53, 20);
             CSVCheckBox.TabIndex = 22;
             CSVCheckBox.Text = "CSV";
             CSVCheckBox.UseVisualStyleBackColor = true;
@@ -380,6 +381,19 @@ namespace StakeOutReport_WinForms
             ElementOfWorksLabel.Text = "Element Of Works";
             ElementOfWorksLabel.Visible = false;
             // 
+            // Error2DCheckBox
+            // 
+            Error2DCheckBox.AutoSize = true;
+            Error2DCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            Error2DCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Error2DCheckBox.Location = new System.Drawing.Point(1046, 320);
+            Error2DCheckBox.Name = "Error2DCheckBox";
+            Error2DCheckBox.Size = new Size(244, 20);
+            Error2DCheckBox.TabIndex = 28;
+            Error2DCheckBox.Text = "Exclude elevation in error calculation?";
+            Error2DCheckBox.UseVisualStyleBackColor = true;
+            Error2DCheckBox.Visible = false;
+            // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -387,6 +401,7 @@ namespace StakeOutReport_WinForms
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
             ClientSize = new Size(1572, 761);
+            Controls.Add(Error2DCheckBox);
             Controls.Add(ElementOfWorksTextBox);
             Controls.Add(ElementOfWorksLabel);
             Controls.Add(ProjectNameTextBox);
@@ -456,5 +471,6 @@ namespace StakeOutReport_WinForms
         private Label ProjectNameLabel;
         private TextBox ElementOfWorksTextBox;
         private Label ElementOfWorksLabel;
+        private CheckBox Error2DCheckBox;
     }
 }
