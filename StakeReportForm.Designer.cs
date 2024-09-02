@@ -219,7 +219,7 @@ namespace StakeOutReport_WinForms
             // CalculateErrorButton
             // 
             CalculateErrorButton.BackColor = Color.White;
-            CalculateErrorButton.Location = new System.Drawing.Point(825, 305);
+            CalculateErrorButton.Location = new System.Drawing.Point(831, 305);
             CalculateErrorButton.Name = "CalculateErrorButton";
             CalculateErrorButton.Size = new Size(174, 35);
             CalculateErrorButton.TabIndex = 14;

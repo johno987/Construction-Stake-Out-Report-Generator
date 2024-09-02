@@ -62,6 +62,16 @@
             }
             return null;
         }
+
+        private decimal? Calculate2DError(Point A)
+        {
+            if (A.Easting != null && A.Northing != null && A.Level != null)
+            {
+                var result = Math.Round(Math.Sqrt((double)(A.Easting * A.Easting) + (double)(A.Northing * A.Northing)), 3);
+                return (decimal)result;
+            }
+            return null;
+        }
         private void populateErrorTableData(bool SuccessfulErrorCalc)
         {
             ErrorPreviewLabel.Visible = SuccessfulErrorCalc ? true : false;
