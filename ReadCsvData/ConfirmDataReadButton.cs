@@ -7,22 +7,32 @@ namespace StakeOutReport_WinForms
         private void ConfirmChoiceAndReadButton_Click(object sender, EventArgs e) //once confirm button has been pressed
         {
             bool SuccessfulRead = true;
-            try
+            if(!string.IsNullOrEmpty(DesignDataFilePath) && !string.IsNullOrEmpty(AsBuiltDataFilePath))
             {
-                DesignData = CSVData.ReadDesignData(DesignDataFilePath);
-                AsBuiltData = CSVData.ReadAsBuiltData(AsBuiltDataFilePath);
-            }
-            catch (Exception ex) //catches any errors in reading the data (empty, incorrect info etc) will catch the bad read and advise the user the input file is bad
-            {
-                SuccessfulRead = false;
-                MessageUser.BadFileRead();
-                ReadStatusLabel.Text = "Error In Reading Data";
-                ReadStatusLabel.BackColor = Color.Red;
-                populateDesignTablesData(SuccessfulRead); //in this case sets them to null as the read failed
-                return;
-            } 
+                try
+                {
+                    DesignData = CSVData.ReadDesignData(DesignDataFilePath);
+                    AsBuiltData = CSVData.ReadAsBuiltData(AsBuiltDataFilePath);
+                }
+                catch (Exception ex) //catches any errors in reading the data (empty, incorrect info etc) will catch the bad read and advise the user the input file is bad
+                {
+                    SuccessfulRead = false;
+                    MessageUser.BadFileRead();
+                    ReadStatusLabel.Text = "Error In Reading Data";
+                    ReadStatusLabel.BackColor = Color.Red;
+                    populateDesignTablesData(SuccessfulRead); //in this case sets them to null as the read failed
+                    return;
+                }
 
-            ChangeReadStatusLabelColourAndSortData(SuccessfulRead);
+                ChangeReadStatusLabelColourAndSortData(SuccessfulRead);
+            }
+            else
+            {
+                //MESSAGE USER CONFIRMING SELECTION CANNOT BE EMPTY
+                MessageUser.EmptyFilePathMessage();
+                return;
+            }
+            
         }
         private void ChangeReadStatusLabelColourAndSortData(bool successfullRead)
         {

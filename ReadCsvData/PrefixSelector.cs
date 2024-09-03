@@ -6,7 +6,7 @@
         {
             PrefixSelector.DropDownStyle = ComboBoxStyle.DropDownList;
             PrefixSelector.TabIndex = 0;
-            string[] choices = ["STKE", "Custom"];
+            string[] choices = ["STKE", "Custom", "None"];
             PrefixSelector.Items.AddRange(choices);
             PrefixSelector.SelectedIndex = 0;
         }
@@ -14,6 +14,10 @@
         private void PrefixSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             AsBuiltPrefixSelection = PrefixSelector.Text; //stores the selected prefix within the string variable
+            if(PrefixSelector.Text == "None")
+            {
+                AsBuiltPrefixSelection = "";
+            }
             //spawn text box to enter custom selection
             CustomPrefixTextBox.Visible = AsBuiltPrefixSelection == "Custom" ? true : false;
 
@@ -34,7 +38,6 @@
             }
             catch (Exception ex)
             {
-                MessageUser.EmptyAsBuiltDataWarning();
                 return false;
             }
         }

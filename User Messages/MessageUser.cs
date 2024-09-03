@@ -31,22 +31,22 @@
             //display the message box
             result = MessageBox.Show(message, caption, buttons);
         }
-        public static void EmptyAsBuiltDataWarning()
+        public static void EmptyReportSelection()
         {
             //make the message variables to pass to the message box
-            string message = "As-Built data cannot be empty";
-            string caption = "Empty As-Built data collection";
+            string message = "No report format has been selected";
+            string caption = "Null report selection";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;
 
             //display the message box
             result = MessageBox.Show(message, caption, buttons);
         }
-        public static void EmptyReportSelection()
+        public static void EmptyFilePathMessage()
         {
             //make the message variables to pass to the message box
-            string message = "No report format has been selected";
-            string caption = "Null report selection";
+            string message = "File path(s) cannot be empty";
+            string caption = "Empty file path";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;
 
