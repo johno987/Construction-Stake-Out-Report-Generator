@@ -22,6 +22,7 @@
         }
         private void StoreErrorInPoints()
         {
+
             var differences =
         from designPoint in DesignData
         join asBuiltPoint in AsBuiltData on AsBuiltPrefixSelection + designPoint.PointID equals asBuiltPoint.PointID into gj
@@ -48,7 +49,7 @@
         }
         private Point CalculateAndReturnDifference(Point A, Point B)
         {
-            if (A.PointID == B.PointID)
+            if (A.PointID == B.PointID && AsBuiltPrefixSelection != string.Empty) //NEED TO KEEP AN EYE HERE FOR ANY BUGS
                 return new Point(A.PointID, null, null, null); //append the actual point ID so we know its number
             return new Point(A.PointID, (A.Easting - B.Easting), (A.Northing - B.Northing), (A.Level - B.Level));
         }

@@ -16,7 +16,7 @@
             AsBuiltPrefixSelection = PrefixSelector.Text; //stores the selected prefix within the string variable
             if(PrefixSelector.Text == "None")
             {
-                AsBuiltPrefixSelection = "";
+                AsBuiltPrefixSelection = string.Empty;
             }
             //spawn text box to enter custom selection
             CustomPrefixTextBox.Visible = AsBuiltPrefixSelection == "Custom" ? true : false;
