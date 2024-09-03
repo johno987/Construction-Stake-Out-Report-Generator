@@ -183,14 +183,16 @@ namespace StakeOutReport_WinForms
 
 
 
+
+
+                    #endregion;
+
                     //IF 2D ERROR OPTION IS SELECTED, N/A WILL BE APPENDED TO THE DIFFERENCE IN ELEVATION COLUMN TO SHOW IT IS NOT BEING USED WITHIN THE ERROR CALC
                     if (Error2DCheckBox.Checked) //TEMP
                     {
-                        var ElevationRange = worksheet.Range($"D5:D{5 + ErrorWith3D.Count}");
+                        var ElevationRange = worksheet.Range($"D5:D{5 + ErrorWith3D.Count - 1}");
                         ElevationRange.Cells().Value = "N/A";
                     }
-
-                    #endregion;
 
 
                     //ADD BORDERS TO THE TABLES
