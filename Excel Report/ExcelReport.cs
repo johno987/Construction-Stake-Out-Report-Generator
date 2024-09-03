@@ -184,11 +184,15 @@ namespace StakeOutReport_WinForms
 
                     //PERHAPS IMPLEMENT THIS FURTHER SO IT REMOVES THE ELEVATION COLUMN IF THE 2D ERROR OPTION IS SELCTED
 
-                    //if(Error2DCheckBox.Checked) //TEMP
-                    //{
-                    //    var ElevationRange = worksheet.Range($"D4:D{4 + ErrorWith3D.Count}");
-                    //    ElevationRange.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-                    //}
+                    if (Error2DCheckBox.Checked) //TEMP
+                    {
+                        var ElevationRange = worksheet.Range($"D5:D{5 + ErrorWith3D.Count}");
+                        foreach (var cell in ElevationRange.Cells())
+                        {
+                            cell.Value = "N/A";
+                        }
+                        
+                    }
 
                     #endregion;
 
