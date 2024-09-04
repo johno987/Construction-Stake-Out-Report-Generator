@@ -16,7 +16,7 @@ namespace StakeOutReport_WinForms
         List<Point> DesignData = new(); //Both Design and AsBuilt info is read into here
         List<Point> AsBuiltData = new();
         List<Point> ErrorInPoints = new(); //essentially stores the difference between the design and as built
-        List<PointError3D> ErrorWith3D = new();
+        public List<PointError3D> ErrorWith3D = new();
         string? AsBuiltPrefixSelection;
         string? ProjectTitle;
         string? ElementOfWorks;

@@ -1,4 +1,7 @@
-﻿namespace StakeOutReport_WinForms
+﻿using QuestPDF.Infrastructure;
+using QuestPDF.Fluent;
+
+namespace StakeOutReport_WinForms
 {
     public partial class StakeOutReport
     {
@@ -13,7 +16,15 @@
             }
             if (PDFCheckBox.Checked)
             {
-                //MAKE PDF REPORT
+                var PDFReport = new PDFGenerator(this);
+                var document = Document.Create(Container =>
+                {
+                    PDFReport.Compose(Container);
+                });
+
+                
+
+                //PDFReport.Compose();
             }
             if (CSVCheckBox.Checked)
             {
