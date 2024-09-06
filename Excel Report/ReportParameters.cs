@@ -16,15 +16,7 @@ namespace StakeOutReport_WinForms
             }
             if (PDFCheckBox.Checked)
             {
-                var PDFReport = new PDFGenerator(this);
-                var document = Document.Create(Container =>
-                {
-                    PDFReport.Compose(Container);
-                });
-
-                
-
-                //PDFReport.Compose();
+                GeneratePDF();
             }
             if (CSVCheckBox.Checked)
             {

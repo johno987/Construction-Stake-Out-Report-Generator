@@ -3,52 +3,35 @@ using QuestPDF.Drawing;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using System.CodeDom;
+using DocumentFormat.OpenXml.Presentation;
+using QuestPDF.Previewer;
 
 namespace StakeOutReport_WinForms
 {
-    public class PDFGenerator : IDocument
+  //SECTION OF CLASS RESERVED FOR GENERATING THE PDF REPORT
+  public partial class StakeOutReport
     {
-        public StakeOutReport StakeOutReport { get; } //pass in the stake out report class object
-        //when am i ready to call this, should be able to pass in the this pointer?
+        private void GeneratePDF()
+        {
+            QuestPDF.Settings.License = LicenseType.Community;
 
-        public PDFGenerator(StakeOutReport stakeOutReport)
-        {
-            StakeOutReport = stakeOutReport;
-        }
-       
-        public DocumentMetadata GetMetaData() => DocumentMetadata.Default;
-        public DocumentSettings GetSettings() => DocumentSettings.Default;
-        public void Compose(IDocumentContainer container) //make the PDF page
-        {
-            container.Page(page =>
+            var report = Document.Create(container =>
             {
-                page.Margin(50);
-                page.Header().Height(100).Background(Colors.Grey.Lighten1);
-                page.Content().Background(Colors.Grey.Lighten3);
-                page.Footer().Height(50).Background(Colors.Grey.Lighten1);
-                page.Size(PageSizes.A3);
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4);
+                    page.Header().Text("PDF Report");
+
+                });
             });
+
+            //SaveFileDialog PDFReport = new SaveFileDialog();
+            //PDFReport.Filter = "PDF|*.pdf";
+            //PDFReport.Title = "Save a PDF filedsasdasdasdasd";
+            //PDFReport.ShowDialog();
+
+            //report.GeneratePdf(PDFReport.FileName);
+            report.ShowInPreviewer();
         }
-
-        //private void composeHeader(IContainer container)
-        //{
-        //    var titleStyle = TextStyle.Default.FontSize(20).SemiBold()
-        //        .FontColor(Colors.Blue.Medium);
-
-        //    container.Row(row =>
-        //    {
-        //        row.RelativeItem().Column(column =>
-        //        {
-                    
-        //        })
-        //    })
-        //}
-    }
-
-    public interface IDocument
-    {
-        DocumentMetadata GetMetaData();
-        DocumentSettings GetSettings();
-        void Compose(IDocumentContainer container);
     }
 }
