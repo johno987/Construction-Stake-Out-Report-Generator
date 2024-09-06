@@ -66,7 +66,7 @@ namespace StakeOutReport_WinForms
                                 header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
                                 header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
 
-                                header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error");
+                                header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error").Bold();
 
                                 //if (Error2DCheckBox.Checked)
                                 //    header.Cell().Element(BlockHeader).Text("2D Error").Bold();
