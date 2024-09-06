@@ -32,7 +32,8 @@ namespace StakeOutReport_WinForms
                         .Height(60)
                         .Background(Colors.Grey.Lighten1)
                         .AlignMiddle()
-                        .Text($"Project Title: {ProjectTitle}\nElement of Works: {ElementOfWorks}" +
+                        .Text($"Project Title: {ProjectTitle}\n" +
+                        $"Element of Works: {ElementOfWorks}" +
                             $"\nDate: {DateTime.Now.ToShortDateString()}")
                         .Bold()
                         .Underline()
@@ -64,10 +65,13 @@ namespace StakeOutReport_WinForms
                                 header.Cell().Element(BlockHeader).Text("Difference in \nEasting").Bold();
                                 header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
                                 header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
-                                if (Error2DCheckBox.Checked)
-                                    header.Cell().Element(BlockHeader).Text("2D Error").Bold();
-                                else
-                                    header.Cell().Element(BlockHeader).Text("3D Error").Bold();
+
+                                header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error");
+
+                                //if (Error2DCheckBox.Checked)
+                                //    header.Cell().Element(BlockHeader).Text("2D Error").Bold();
+                                //else
+                                //    header.Cell().Element(BlockHeader).Text("3D Error").Bold();
                             });
 
                             foreach (var point in ErrorWith3D)
@@ -75,19 +79,20 @@ namespace StakeOutReport_WinForms
                                 table.Cell().Element(BlockBody).Text(point.PointID.ToString());
                                 table.Cell().Element(BlockBody).Text(point.Easting.ToString());
                                 table.Cell().Element(BlockBody).Text(point.Northing.ToString());
-                                if(Error2DCheckBox.Checked)
-                                    table.Cell().Element(BlockBody).Text("N/A");
-                                else
-                                    table.Cell().Element(BlockBody).Text(point.Level.ToString());
+
+                                table.Cell().Element(BlockBody).Text(Error2DCheckBox.Checked ? "N/A" : point.Level.ToString());
+
+                                //if(Error2DCheckBox.Checked)
+                                //    table.Cell().Element(BlockBody).Text("N/A");
+                                //else
+                                //    table.Cell().Element(BlockBody).Text(point.Level.ToString());
 
                                 table.Cell().Element(BlockBody).Text(point.Error.ToString());
+
+                                //Add a check for this element like the below but will be for the tolerance
+                                //table.Cell().Element(Error2DCheckBox.Checked ? BlockBody : BlockHeader).Text(point.Error.ToString());
                             }
 
-                            //table.Cell().Row(1).Column(1).Element(Block).Text("PointID");
-                            //table.Cell().Row(1).Column(2).Element(Block).Text("Difference in Easting");
-                            //table.Cell().Row(1).Column(3).Element(Block).Text("Difference in Northing");
-                            //table.Cell().Row(1).Column(4).Element(Block).Text("Difference in Elevation");
-                            //table.Cell().Row(1).Column(5).Element(Block).Text("Total Error");
 
 
 
