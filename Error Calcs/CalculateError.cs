@@ -41,7 +41,7 @@
                 PointID = baseItem.PointID,
                 Easting = baseItem.Easting,
                 Northing = baseItem.Northing,
-                Level = baseItem.Level,
+                Level = Error2DCheckBox.Checked ? null : baseItem.Level,
                 //Error3D = Calculate3DError(baseItem)
                 Error = Error2DCheckBox.Checked ? Calculate2DError(baseItem) : Calculate3DError(baseItem) //if it is checked
                 //only the easting and northings will be considered

@@ -221,9 +221,9 @@ namespace StakeOutReport_WinForms
                 return;
             }
 
-            //MESSAGE USER CONFIRMING SUCCESSFULLY CREATED EXCEL SHEET
-            MessageBox.Show("Report Created!", "Report Success", MessageBoxButtons.OK);
 
+            //MESSAGE USER CONFIRMING SUCCESSFULLY CREATED EXCEL SHEET
+            MessageBox.Show("Exccel Report Created!", "Report Success", MessageBoxButtons.OK);
         }
     }
 }

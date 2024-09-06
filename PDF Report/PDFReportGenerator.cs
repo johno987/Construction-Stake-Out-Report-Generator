@@ -9,153 +9,172 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StakeOutReport_WinForms
 {
-  //SECTION OF CLASS RESERVED FOR GENERATING THE PDF REPORT
-  public partial class StakeOutReport
+    //SECTION OF CLASS RESERVED FOR GENERATING THE PDF REPORT
+    public partial class StakeOutReport
     {
         private void GeneratePDF()
         {
-            QuestPDF.Settings.License = LicenseType.Community;
-
-            var doc = Document.Create(document =>
+            try
             {
-                document.Page(page =>
+                QuestPDF.Settings.License = LicenseType.Community;
+
+                var doc = Document.Create(document =>
                 {
-                    //PAGE PROPERTIES
-                    page.Size(PageSizes.A4);
-                    page.MarginHorizontal(10);
-                    page.MarginVertical(10);
-
-                    //HEADER PROPERTIES
-                    page.Header()
-                    .Height(60)
-                    .Background(Colors.Grey.Lighten1)
-                    .AlignMiddle()
-                    .Text($"Project Title: {ProjectTitle}\nElement of Works: {ElementOfWorks}" +
-                        $"\nDate: {DateTime.Now.ToShortDateString()}")
-                    .Bold()
-                    .Underline()
-                    .FontSize(15);
-
-
-                    //CONTENT PROPERTIES
-                    //page.Content()
-                    //.Background(Colors.Grey.Lighten2)
-                    //.AlignTop()
-                    //.Text("This is the main body of the report");
-
-                    page.Content()
-                    .PaddingVertical(10)
-                    .Table(table =>
+                    document.Page(page =>
                     {
-                        table.ColumnsDefinition(columns =>
+                        //PAGE PROPERTIES
+                        page.Size(PageSizes.A4);
+                        page.MarginHorizontal(10);
+                        page.MarginVertical(10);
+
+                        //HEADER PROPERTIES
+                        page.Header()
+                        .Height(60)
+                        .Background(Colors.Grey.Lighten1)
+                        .AlignMiddle()
+                        .Text($"Project Title: {ProjectTitle}\nElement of Works: {ElementOfWorks}" +
+                            $"\nDate: {DateTime.Now.ToShortDateString()}")
+                        .Bold()
+                        .Underline()
+                        .FontSize(15);
+
+
+                        //CONTENT PROPERTIES
+                        //page.Content()
+                        //.Background(Colors.Grey.Lighten2)
+                        //.AlignTop()
+                        //.Text("This is the main body of the report");
+
+                        page.Content()
+                        .PaddingVertical(10)
+                        .Table(table =>
                         {
-                            columns.RelativeColumn();
-                            columns.RelativeColumn();
-                            columns.RelativeColumn();
-                            columns.RelativeColumn();
-                            columns.RelativeColumn();
+                            table.ColumnsDefinition(columns =>
+                            {
+                                columns.RelativeColumn();
+                                columns.RelativeColumn();
+                                columns.RelativeColumn();
+                                columns.RelativeColumn();
+                                columns.RelativeColumn();
+                            });
+
+                            table.Header(header =>
+                            {
+                                header.Cell().Element(BlockHeader).Text("Point ID").Bold();
+                                header.Cell().Element(BlockHeader).Text("Difference in \nEasting").Bold();
+                                header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
+                                header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
+                                if (Error2DCheckBox.Checked)
+                                    header.Cell().Element(BlockHeader).Text("2D Error").Bold();
+                                else
+                                    header.Cell().Element(BlockHeader).Text("3D Error").Bold();
+                            });
+
+                            foreach (var point in ErrorWith3D)
+                            {
+                                table.Cell().Element(BlockBody).Text(point.PointID.ToString());
+                                table.Cell().Element(BlockBody).Text(point.Easting.ToString());
+                                table.Cell().Element(BlockBody).Text(point.Northing.ToString());
+                                if(Error2DCheckBox.Checked)
+                                    table.Cell().Element(BlockBody).Text("N/A");
+                                else
+                                    table.Cell().Element(BlockBody).Text(point.Level.ToString());
+
+                                table.Cell().Element(BlockBody).Text(point.Error.ToString());
+                            }
+
+                            //table.Cell().Row(1).Column(1).Element(Block).Text("PointID");
+                            //table.Cell().Row(1).Column(2).Element(Block).Text("Difference in Easting");
+                            //table.Cell().Row(1).Column(3).Element(Block).Text("Difference in Northing");
+                            //table.Cell().Row(1).Column(4).Element(Block).Text("Difference in Elevation");
+                            //table.Cell().Row(1).Column(5).Element(Block).Text("Total Error");
+
+
+
+
                         });
 
-                        table.Header(header =>
+                        static QuestPDF.Infrastructure.IContainer BlockHeader(QuestPDF.Infrastructure.IContainer container)
                         {
-                            header.Cell().Element(BlockHeader).Text("Point ID").Bold();
-                            header.Cell().Element(BlockHeader).Text("Difference in Easting").Bold();
-                            header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
-                            header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
-                            header.Cell().Element(BlockHeader).Text("Error").Bold();
-                        });
-
-                        foreach (var point in ErrorWith3D)
-                        {
-                            table.Cell().Element(BlockBody).Text(point.PointID.ToString());
-                            table.Cell().Element(BlockBody).Text(point.Easting.ToString());
-                            table.Cell().Element(BlockBody).Text(point.Northing.ToString());
-                            table.Cell().Element(BlockBody).Text(point.Level.ToString());
-                            table.Cell().Element(BlockBody).Text(point.Error.ToString());
+                            return container
+                            .Border(1)
+                            .Background(Colors.Grey.Lighten1)
+                            .ShowEntire()
+                            .MinWidth(30)
+                            .MinHeight(30)
+                            .AlignCenter()
+                            .AlignMiddle();
                         }
 
-                        //table.Cell().Row(1).Column(1).Element(Block).Text("PointID");
-                        //table.Cell().Row(1).Column(2).Element(Block).Text("Difference in Easting");
-                        //table.Cell().Row(1).Column(3).Element(Block).Text("Difference in Northing");
-                        //table.Cell().Row(1).Column(4).Element(Block).Text("Difference in Elevation");
-                        //table.Cell().Row(1).Column(5).Element(Block).Text("Total Error");
-
-
-
-
-                    });
-
-                    static QuestPDF.Infrastructure.IContainer BlockHeader(QuestPDF.Infrastructure.IContainer container)
-                    {
-                        return container
-                        .Border(1)
-                        .Background(Colors.Grey.Lighten1)
-                        .ShowOnce()
-                        .MinWidth(30)
-                        .MinHeight(30)
-                        .AlignCenter()
-                        .AlignMiddle();
-                    }
-
-                    static QuestPDF.Infrastructure.IContainer BlockBody(QuestPDF.Infrastructure.IContainer container)
-                    {
-                        return container
-                        .Border(1)
-                        .Background(Colors.Grey.Lighten4)
-                        .ShowOnce()
-                        .MinWidth(30)
-                        .MinHeight(30)
-                        .AlignCenter()
-                        .AlignMiddle();
-                    }
-
-
-                    //FOOTER PROPERTIES
-                    page.Footer()
-                    //.PaddingVertical(10)
-                    //.PaddingHorizontal(10)
-                    .Height(50)
-                    .Background(Colors.Grey.Lighten1)
-                    .Row(row =>
-                    {
-                        row.RelativeItem()
-                        .AlignCenter()
-                        .AlignMiddle()
-                        .PaddingLeft(20)
-                        .Text("Stake Out Report. Software Created By W.Johnson")
-                        .Italic()
-                        .SemiBold();
-
-                        row.ConstantItem(100)
-                        .AlignRight()
-                        .AlignMiddle()
-                        .PaddingRight(20)
-                        .Text(text =>
+                        static QuestPDF.Infrastructure.IContainer BlockBody(QuestPDF.Infrastructure.IContainer container)
                         {
-                            text.Span("Page ");
-                            text.CurrentPageNumber();
-                            text.Span(" / ");
-                            text.TotalPages();
+                            return container
+                            .Border(1)
+                            .Background(Colors.Grey.Lighten4)
+                            .ShowOnce()
+                            .MinWidth(25)
+                            .MinHeight(25)
+                            .AlignCenter()
+                            .AlignMiddle();
+                        }
+
+
+                        //FOOTER PROPERTIES
+                        page.Footer()
+                        //.PaddingVertical(10)
+                        //.PaddingHorizontal(10)
+                        .Height(50)
+                        .Background(Colors.Grey.Lighten1)
+                        .Row(row =>
+                        {
+                            row.RelativeItem()
+                            .AlignCenter()
+                            .AlignMiddle()
+                            .PaddingLeft(20)
+                            .Text("Stake Out Report. Software Created By W.Johnson")
+                            .Italic()
+                            .SemiBold();
+
+                            row.ConstantItem(100)
+                            .AlignRight()
+                            .AlignMiddle()
+                            .PaddingRight(20)
+                            .Text(text =>
+                            {
+                                text.Span("Page ");
+                                text.CurrentPageNumber();
+                                text.Span(" / ");
+                                text.TotalPages();
+                            });
                         });
+                        //.Text("Stake Out Report. Software created by W.Johnson")
+                        //.Italic().
+                        //Underline();
+
                     });
-                    //.Text("Stake Out Report. Software created by W.Johnson")
-                    //.Italic().
-                    //Underline();
+
+
+
+
 
                 });
 
-               
+                SaveFileDialog PDFFile = new SaveFileDialog();
+                PDFFile.Filter = "PDF|*.pdf";
+                PDFFile.Title = "Save a PDF file";
+                PDFFile.ShowDialog();
+                string filePath = PDFFile.FileName; //FILEPATH IS STORED HERE
+                doc.GeneratePdf(filePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error creating PDF file", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-              
 
-            });
-
-            SaveFileDialog PDFFile = new SaveFileDialog();
-            PDFFile.Filter = "PDF|*.pdf";
-            PDFFile.Title = "Save a PDF file";
-            PDFFile.ShowDialog();
-            string filePath = PDFFile.FileName; //FILEPATH IS STORED HERE
-            doc.GeneratePdf(filePath);
+            //MESSAGE USER CONFIRMING SUCCESSFULLY CREATED EXCEL SHEET
+            MessageBox.Show("PDF Report Created!", "Report Success", MessageBoxButtons.OK);
 
 
 
