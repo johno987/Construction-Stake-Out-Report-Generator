@@ -181,9 +181,22 @@ namespace StakeOutReport_WinForms
                     ColURangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
                     ColVRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
 
-
-
-
+                    //NOW GET THE RANGE OF CELLS THAT CONTAIN THE ERROR COLUMN
+                    if(DefineErrorCheckBox.Checked && !string.IsNullOrEmpty(ToleranceTextBox.Text))
+                    {
+                        var ErrorRangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count - 1}");
+                        foreach (var cell in ErrorRangeData.Cells())
+                        {
+                            //MAY NEED TO ADD AN EMPTY CELL CHECK HERE
+                            if (cell.IsEmpty())
+                                continue;
+                            var cellValue = decimal.Parse(cell.Value.ToString());
+                            if (cellValue > DefinedErrorTolerance)
+                            {
+                                worksheet.Range($"A{cell.Address.RowNumber}:{cell.Address}").Style.Fill.BackgroundColor = XLColor.Red;
+                            }
+                        }
+                    }
 
                     #endregion;
 
