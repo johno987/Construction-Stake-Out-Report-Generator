@@ -27,5 +27,11 @@ namespace StakeOutReport_WinForms
             SetCurrentDate();
             InitialiseComboBox();
         }
+
+        private void DefineErrorCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            ToleranceTextBox.Visible = !ToleranceTextBox.Visible;
+        }
+
     }
 }

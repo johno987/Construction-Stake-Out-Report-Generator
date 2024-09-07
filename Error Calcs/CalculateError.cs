@@ -82,6 +82,10 @@
             ErrorPreviewLabel.Visible = SuccessfulErrorCalc ? true : false;
             ErrorPreviewDataTable.Visible = SuccessfulErrorCalc ? true : false;
             ErrorPreviewDataTable.DataSource = SuccessfulErrorCalc ? ErrorWith3D : null;
+
+            DefineErrorCheckBox.Visible = SuccessfulErrorCalc ? true : false;
+
+
             ErrorPreviewDataTable.Columns["PointID"].DisplayIndex = 0;
             ErrorPreviewDataTable.Columns["Easting"].DisplayIndex = 1;
             ErrorPreviewDataTable.Columns["Northing"].DisplayIndex = 2;

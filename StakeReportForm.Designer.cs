@@ -61,6 +61,8 @@ namespace StakeOutReport_WinForms
             ElementOfWorksLabel = new Label();
             Error2DCheckBox = new CheckBox();
             WaterMarkLabel = new Label();
+            DefineErrorCheckBox = new CheckBox();
+            ToleranceTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).BeginInit();
@@ -406,6 +408,30 @@ namespace StakeOutReport_WinForms
             WaterMarkLabel.Text = "Software created by W,Johnson V1.0.0";
             WaterMarkLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // DefineErrorCheckBox
+            // 
+            DefineErrorCheckBox.AutoSize = true;
+            DefineErrorCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            DefineErrorCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DefineErrorCheckBox.Location = new System.Drawing.Point(1208, 396);
+            DefineErrorCheckBox.Name = "DefineErrorCheckBox";
+            DefineErrorCheckBox.Size = new Size(156, 20);
+            DefineErrorCheckBox.TabIndex = 30;
+            DefineErrorCheckBox.Text = "Define error tolerance?";
+            DefineErrorCheckBox.UseVisualStyleBackColor = true;
+            DefineErrorCheckBox.Visible = false;
+            DefineErrorCheckBox.CheckedChanged += DefineErrorCheckBox_CheckedChanged;
+            // 
+            // ToleranceTextBox
+            // 
+            ToleranceTextBox.Location = new System.Drawing.Point(1213, 422);
+            ToleranceTextBox.MaxLength = 10;
+            ToleranceTextBox.Name = "ToleranceTextBox";
+            ToleranceTextBox.PlaceholderText = "5mm";
+            ToleranceTextBox.Size = new Size(101, 23);
+            ToleranceTextBox.TabIndex = 31;
+            ToleranceTextBox.Visible = false;
+            // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -413,6 +439,8 @@ namespace StakeOutReport_WinForms
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
             ClientSize = new Size(1572, 761);
+            Controls.Add(ToleranceTextBox);
+            Controls.Add(DefineErrorCheckBox);
             Controls.Add(WaterMarkLabel);
             Controls.Add(Error2DCheckBox);
             Controls.Add(ElementOfWorksTextBox);
@@ -486,5 +514,7 @@ namespace StakeOutReport_WinForms
         private Label ElementOfWorksLabel;
         private CheckBox Error2DCheckBox;
         private Label WaterMarkLabel;
+        private CheckBox DefineErrorCheckBox;
+        private TextBox ToleranceTextBox;
     }
 }
