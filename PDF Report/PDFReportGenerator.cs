@@ -68,34 +68,30 @@ namespace StakeOutReport_WinForms
 
                                 header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error").Bold();
 
-                                //if (Error2DCheckBox.Checked)
-                                //    header.Cell().Element(BlockHeader).Text("2D Error").Bold();
-                                //else
-                                //    header.Cell().Element(BlockHeader).Text("3D Error").Bold();
                             });
 
                             foreach (var point in ErrorWith3D)
                             {
-                                table.Cell().Element(BlockBody).Text(point.PointID.ToString());
-                                table.Cell().Element(BlockBody).Text(point.Easting.ToString());
-                                table.Cell().Element(BlockBody).Text(point.Northing.ToString());
+                                //SECTION HERE DECIDES THE COLOUR OF THE ROW DEPENDING ON WHETHER OR NOT THE TOLERANCE IS EXCEEDED, ENTIRE ROW IS HIGHLIGHTED
+                                var ExceededTolerance = point.Error > DefinedErrorTolerance;
 
-                                table.Cell().Element(BlockBody).Text(Error2DCheckBox.Checked ? "N/A" : point.Level.ToString());
+                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.PointID.ToString());
+                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Easting.ToString());
+                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Northing.ToString());
 
-                                //if(Error2DCheckBox.Checked)
-                                //    table.Cell().Element(BlockBody).Text("N/A");
-                                //else
-                                //    table.Cell().Element(BlockBody).Text(point.Level.ToString());
+                                //ENSURES ONLY ROWS THAT HAVE A VALUE / EXIST ARE OVERWROTE WITH N/A WHEN CONDUCTING A 2D CHECK
+                                if(point.Easting != null)
+                                {
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(Error2DCheckBox.Checked ? "N/A" : point.Level.ToString());
+                                }
+                                else
+                                {
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(string.Empty);
+                                }
+                                
+                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Error.ToString());
 
-                                table.Cell().Element(BlockBody).Text(point.Error.ToString());
-
-                                //Add a check for this element like the below but will be for the tolerance
-                                //table.Cell().Element(Error2DCheckBox.Checked ? BlockBody : BlockHeader).Text(point.Error.ToString());
                             }
-
-
-
-
 
                         });
 
@@ -116,6 +112,19 @@ namespace StakeOutReport_WinForms
                             return container
                             .Border(1)
                             .Background(Colors.Grey.Lighten4)
+                            .ShowOnce()
+                            .MinWidth(25)
+                            .MinHeight(25)
+                            .AlignCenter()
+                            .AlignMiddle();
+                        }
+
+
+                        static QuestPDF.Infrastructure.IContainer BlockBodyExceededTolerance(QuestPDF.Infrastructure.IContainer container)
+                        {
+                            return container
+                            .Border(1)
+                            .Background(Colors.Red.Lighten1)
                             .ShowOnce()
                             .MinWidth(25)
                             .MinHeight(25)
