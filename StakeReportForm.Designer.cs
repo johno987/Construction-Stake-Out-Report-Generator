@@ -60,6 +60,7 @@ namespace StakeOutReport_WinForms
             ElementOfWorksTextBox = new TextBox();
             ElementOfWorksLabel = new Label();
             Error2DCheckBox = new CheckBox();
+            WaterMarkLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).BeginInit();
@@ -394,6 +395,17 @@ namespace StakeOutReport_WinForms
             Error2DCheckBox.UseVisualStyleBackColor = true;
             Error2DCheckBox.Visible = false;
             // 
+            // WaterMarkLabel
+            // 
+            WaterMarkLabel.Font = new Font("Arial", 8.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            WaterMarkLabel.ForeColor = SystemColors.ControlDarkDark;
+            WaterMarkLabel.Location = new System.Drawing.Point(1387, 714);
+            WaterMarkLabel.Name = "WaterMarkLabel";
+            WaterMarkLabel.Size = new Size(173, 38);
+            WaterMarkLabel.TabIndex = 29;
+            WaterMarkLabel.Text = "Software created by W,Johnson V1.0.0";
+            WaterMarkLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // StakeOutReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -401,6 +413,7 @@ namespace StakeOutReport_WinForms
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
             ClientSize = new Size(1572, 761);
+            Controls.Add(WaterMarkLabel);
             Controls.Add(Error2DCheckBox);
             Controls.Add(ElementOfWorksTextBox);
             Controls.Add(ElementOfWorksLabel);
@@ -472,5 +485,6 @@ namespace StakeOutReport_WinForms
         private TextBox ElementOfWorksTextBox;
         private Label ElementOfWorksLabel;
         private CheckBox Error2DCheckBox;
+        private Label WaterMarkLabel;
     }
 }
