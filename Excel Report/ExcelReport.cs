@@ -228,14 +228,6 @@ namespace StakeOutReport_WinForms
                             .Where(cell => !worksheet.Cell($"B{cell.Address.RowNumber}").IsEmpty())
                             .ToList()
                             .ForEach(cell => cell.Value = "N/A");
-
-                        //foreach (var cell in ElevationRange.Cells())
-                        //{
-                        //    //var CurrentCell = worksheet.Cell($"B{cell.Address.RowNumber}")
-                        //    if (worksheet.Cell($"B{cell.Address.RowNumber}").IsEmpty())
-                        //        continue;
-                        //    cell.Value = "N/A";
-                        //}
                     }
 
 
