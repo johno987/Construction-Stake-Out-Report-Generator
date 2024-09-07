@@ -29,73 +29,142 @@ namespace StakeOutReport_WinForms
 
                         //HEADER PROPERTIES
                         page.Header()
-                        .Height(60)
+                        .Height(70)
+                        .PaddingBottom(5)
                         .Background(Colors.Grey.Lighten1)
-                        .AlignMiddle()
-                        .Text($"Project Title: {ProjectTitle}\n" +
-                        $"Element of Works: {ElementOfWorks}" +
-                            $"\nDate: {DateTime.Now.ToShortDateString()}")
-                        .Bold()
-                        .Underline()
-                        .FontSize(15);
-
-
-                        //CONTENT PROPERTIES
-                        //page.Content()
-                        //.Background(Colors.Grey.Lighten2)
-                        //.AlignTop()
-                        //.Text("This is the main body of the report");
-
-                        page.Content()
-                        .PaddingVertical(10)
-                        .Table(table =>
+                        .Border(1)
+                        .BorderColor(Colors.Black)
+                        .Row(row =>
                         {
-                            table.ColumnsDefinition(columns =>
-                            {
-                                columns.RelativeColumn();
-                                columns.RelativeColumn();
-                                columns.RelativeColumn();
-                                columns.RelativeColumn();
-                                columns.RelativeColumn();
-                            });
+                            row.RelativeItem()
+                            .AlignLeft()
+                            .AlignMiddle()
+                            .PaddingLeft(10)
+                            .Text($"Project Title: {ProjectTitle}\n" +
+                                  $"Element of Works: {ElementOfWorks}" +
+                                  $"\nDate Report Generated: {DateTime.Now.ToShortDateString()}")
+                            .Bold()
+                            .Underline()
+                            .FontSize(15);
 
-                            table.Header(header =>
-                            {
-                                header.Cell().Element(BlockHeader).Text("Point ID").Bold();
-                                header.Cell().Element(BlockHeader).Text("Difference in \nEasting").Bold();
-                                header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
-                                header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
+                            row.RelativeItem()
+                            .AlignRight()
+                            .AlignMiddle()
+                            .PaddingRight(10)
+                            .Text(DefineErrorCheckBox.Checked ? $"Defined Tolerance: {DefinedErrorTolerance}m" : "Defined Tolerance: N/A")
+                            .Bold()
+                            .Underline()
+                            .FontSize(15);
 
-                                header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error").Bold();
 
-                            });
 
-                            foreach (var point in ErrorWith3D)
-                            {
-                                //SECTION HERE DECIDES THE COLOUR OF THE ROW DEPENDING ON WHETHER OR NOT THE TOLERANCE IS EXCEEDED, ENTIRE ROW IS HIGHLIGHTED
-                                var ExceededTolerance = point.Error > DefinedErrorTolerance;
-
-                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.PointID.ToString());
-                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Easting.ToString());
-                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Northing.ToString());
-
-                                //ENSURES ONLY ROWS THAT HAVE A VALUE / EXIST ARE OVERWROTE WITH N/A WHEN CONDUCTING A 2D CHECK
-                                if(point.Easting != null)
-                                {
-                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(Error2DCheckBox.Checked ? "N/A" : point.Level.ToString());
-                                }
-                                else
-                                {
-                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(string.Empty);
-                                }
-                                
-                                table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Error.ToString());
-
-                            }
 
                         });
 
+                        //PAGE CONTENT
+                        page.Content()
+                        //.PaddingVertical(10)
+                        .Column(column =>
+                        {
+                            column.Item()
+                            .Element(BlockTableHeader)
+                            .Text("Summary of Point Errors (m)")
+                            .Bold()
+                            .Underline();
+                      
+                            column.Item().
+                            Table(table =>
+                            {
+                                
+                                table.ColumnsDefinition(columns =>
+                                {
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                    columns.RelativeColumn();
+                                });
+
+                                table.Header(header =>
+                                {
+                                    header.Cell().Element(BlockHeader).Text("Point ID").Bold();
+                                    header.Cell().Element(BlockHeader).Text("Difference in \nEasting").Bold();
+                                    header.Cell().Element(BlockHeader).Text("Difference in Northing").Bold();
+                                    header.Cell().Element(BlockHeader).Text("Difference in Elevation").Bold();
+
+                                    header.Cell().Element(BlockHeader).Text(Error2DCheckBox.Checked ? "2D Error" : "3D Error").Bold();
+
+                                });
+
+                                foreach (var point in ErrorWith3D)
+                                {
+                                    //SECTION HERE DECIDES THE COLOUR OF THE ROW DEPENDING ON WHETHER OR NOT THE TOLERANCE IS EXCEEDED, ENTIRE ROW IS HIGHLIGHTED
+                                    var ExceededTolerance = point.Error > DefinedErrorTolerance;
+
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.PointID.ToString());
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Easting.ToString());
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Northing.ToString());
+
+                                    //ENSURES ONLY ROWS THAT HAVE A VALUE / EXIST ARE OVERWROTE WITH N/A WHEN CONDUCTING A 2D CHECK
+                                    if (point.Easting != null)
+                                    {
+                                        table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(Error2DCheckBox.Checked ? "N/A" : point.Level.ToString());
+                                    }
+                                    else
+                                    {
+                                        table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(string.Empty);
+                                    }
+
+                                    table.Cell().Element(ExceededTolerance ? BlockBodyExceededTolerance : BlockBody).Text(point.Error.ToString());
+
+                                }
+
+                            });
+                        });
+                        
+
+                        //FOOTER PROPERTIES
+                        page.Footer()
+                        .Height(50)
+                        .Background(Colors.Grey.Lighten1)
+                        .Border(1)
+                        .BorderColor(Colors.Black)
+                        .Row(row =>
+                        {
+                            row.RelativeItem()
+                            .AlignLeft()
+                            .AlignMiddle()
+                            .PaddingLeft(10)
+                            .Text("Stake Out Report.\nSoftware created By W.Johnson\nV1.0.0")
+                            .FontSize(10)
+                            .Italic();
+
+                            row.ConstantItem(100)
+                            .AlignRight()
+                            .AlignMiddle()
+                            .PaddingRight(20)
+                            .Text(text =>
+                            {
+                                text.Span("Page ");
+                                text.CurrentPageNumber();
+                                text.Span(" / ");
+                                text.TotalPages();
+                            });
+                        });
+
                         static QuestPDF.Infrastructure.IContainer BlockHeader(QuestPDF.Infrastructure.IContainer container)
+                        {
+                            return container
+                            .Border(1)
+                            .Background(Colors.Grey.Lighten2)
+                            .ShowEntire()
+                            .MinWidth(30)
+                            .MinHeight(30)
+                            .AlignCenter()
+                            .AlignMiddle();
+                        }
+
+                        static QuestPDF.Infrastructure.IContainer BlockTableHeader(QuestPDF.Infrastructure.IContainer container)
                         {
                             return container
                             .Border(1)
@@ -131,39 +200,6 @@ namespace StakeOutReport_WinForms
                             .AlignCenter()
                             .AlignMiddle();
                         }
-
-
-                        //FOOTER PROPERTIES
-                        page.Footer()
-                        //.PaddingVertical(10)
-                        //.PaddingHorizontal(10)
-                        .Height(50)
-                        .Background(Colors.Grey.Lighten1)
-                        .Row(row =>
-                        {
-                            row.RelativeItem()
-                            .AlignCenter()
-                            .AlignMiddle()
-                            .PaddingLeft(20)
-                            .Text("Stake Out Report. Software Created By W.Johnson")
-                            .Italic()
-                            .SemiBold();
-
-                            row.ConstantItem(100)
-                            .AlignRight()
-                            .AlignMiddle()
-                            .PaddingRight(20)
-                            .Text(text =>
-                            {
-                                text.Span("Page ");
-                                text.CurrentPageNumber();
-                                text.Span(" / ");
-                                text.TotalPages();
-                            });
-                        });
-                        //.Text("Stake Out Report. Software created by W.Johnson")
-                        //.Italic().
-                        //Underline();
 
                     });
 
