@@ -6,6 +6,9 @@
         {
             ToleranceTextBox.Visible = !ToleranceTextBox.Visible;
             ToleranceTextBox.Text = null;
+
+            //set actual value back to null?
+            DefinedErrorTolerance = null;
         }
 
         private void ToleranceTextBox_KeyPress(object sender, KeyPressEventArgs e)
