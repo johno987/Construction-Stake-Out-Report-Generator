@@ -44,28 +44,45 @@ namespace StakeOutReport_WinForms
                     worksheet.Cell("A1").Value = "Project Title";
                     worksheet.Cell("A1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
+
+                    worksheet.Cell("A2").Value = "Element Of Works";
+                    worksheet.Cell("A2").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
                     worksheet.Cell("B1").Value = ProjectTitle;
                     worksheet.Cell("B1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     worksheet.Cell("B1").Style.Fill.BackgroundColor = XLColor.AshGrey;
 
+                    worksheet.Cell("B2").Value = ElementOfWorks;
+                    worksheet.Cell("B2").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Cell("B2").Style.Fill.BackgroundColor = XLColor.AshGrey;
+
                     worksheet.Cell("C1").Value = "Date Report Generated";
                     worksheet.Cell("C1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
+                    worksheet.Cell("C2").Value = "Defined Tolerance (m)";
+                    worksheet.Cell("C2").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
                     worksheet.Cell("D1").Value = DateTime.Now.ToString("dd/MM/yyyy");
                     worksheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     worksheet.Cell("D1").Style.Fill.BackgroundColor = XLColor.AshGrey;
 
+                    worksheet.Cell("D2").Value = DefinedErrorTolerance;
+                    worksheet.Cell("D2").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Cell("D2").Style.Fill.BackgroundColor = XLColor.AshGrey;
+
+
                     // Add main headers
-                    worksheet.Cell("A3").Value = "Point Errors";
-                    worksheet.Range("A3:E3").Row(1).Merge();
-                    worksheet.Cell("A3").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Cell("A4").Value = "Point Errors (m)";
+                    worksheet.Range("A4:E4").Row(1).Merge();
+                    worksheet.Cell("A4").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
-                    worksheet.Cell("G3").Value = "Design Info";
-                    worksheet.Range("G3:J3").Row(1).Merge();
-                    worksheet.Cell("G3").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Cell("G4").Value = "Design Info";
+                    worksheet.Range("G4:J4").Row(1).Merge();
+                    worksheet.Cell("G4").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
-                    worksheet.Cell("L3").Value = "As Built Info";
-                    worksheet.Range("L3:O3").Row(1).Merge();
-                    worksheet.Cell("L3").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Cell("L4").Value = "As Built Info";
+                    worksheet.Range("L4:O4").Row(1).Merge();
+                    worksheet.Cell("L4").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
                     // Add sub-headers
                     string[] subHeaders3D = { "Point ID", "Difference in Easting", "Difference in Northing", "Difference in Elevation", "3D Error" };
@@ -75,50 +92,50 @@ namespace StakeOutReport_WinForms
                     for (int i = 0; i < subHeaders3D.Length; i++)
                     {
                         //if 2d error only, use the 2d headers, else use the 3d headers
-                        worksheet.Cell(4, i + 1).Value = Error2DCheckBox.Checked ? subHeaders2D[i] : subHeaders3D[i];
+                        worksheet.Cell(5, i + 1).Value = Error2DCheckBox.Checked ? subHeaders2D[i] : subHeaders3D[i];
                     }
 
                     for (int i = 0; i < subHeadersWithoutError.Length; i++)
                     {
-                        worksheet.Cell(4, i + 7).Value = subHeadersWithoutError[i];
-                        worksheet.Cell(4, i + 12).Value = subHeadersWithoutError[i];
+                        worksheet.Cell(5, i + 7).Value = subHeadersWithoutError[i];
+                        worksheet.Cell(5, i + 12).Value = subHeadersWithoutError[i];
                     }
 
                     //Add borders
-                    var ProjectHeaderRange = worksheet.Range("A1:D1");
+                    var ProjectHeaderRange = worksheet.Range("A1:D2");
                     ProjectHeaderRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     ProjectHeaderRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
-                    var ErrorTableRange = worksheet.Range("A4:E4");
+                    var ErrorTableRange = worksheet.Range("A5:E5");
                     ErrorTableRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     ErrorTableRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
-                    var DesignDataTableRange = worksheet.Range("G4:J4");
+                    var DesignDataTableRange = worksheet.Range("G5:J5");
                     DesignDataTableRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     DesignDataTableRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
-                    var AsBuiltDataTableRange = worksheet.Range("L4:O4");
+                    var AsBuiltDataTableRange = worksheet.Range("L5:O5");
                     AsBuiltDataTableRange.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                     AsBuiltDataTableRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
 
 
                     //do the final header borders thick last so they arent overwrote
-                    var ErrorHeader = worksheet.Range("A3:E3");
+                    var ErrorHeader = worksheet.Range("A4:E4");
                     ErrorHeader.Style.Border.OutsideBorder = XLBorderStyleValues.Thick;
 
-                    var DesignHeader = worksheet.Range("G3:J3");
+                    var DesignHeader = worksheet.Range("G4:J4");
                     DesignHeader.Style.Border.OutsideBorder = XLBorderStyleValues.Thick;
 
-                    var AsBuiltHeader = worksheet.Range("L3:O3");
+                    var AsBuiltHeader = worksheet.Range("L4:O4");
                     AsBuiltHeader.Style.Border.OutsideBorder = XLBorderStyleValues.Thick;
 
 
 
                     //text styling
-                    var headerRange = worksheet.Range("A1:D1");
+                    var headerRange = worksheet.Range("A1:D2");
                     headerRange.Style.Font.Bold = true;
 
-                    var subHeaderRange = worksheet.Range("A3:O4");
+                    var subHeaderRange = worksheet.Range("A4:O5");
                     subHeaderRange.Style.Font.Bold = true;
                     subHeaderRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
@@ -127,33 +144,33 @@ namespace StakeOutReport_WinForms
 
 
                     //WRITE THE DATA TO THE TABLES
-                    var errorRange = worksheet.Cell("A5").InsertData(ErrorWith3D);
-                    var DesignRange = worksheet.Cell("G5").InsertData(DesignData);
-                    var AsBuiltRange = worksheet.Cell("L5").InsertData(AsBuiltData);
+                    var errorRange = worksheet.Cell("A6").InsertData(ErrorWith3D);
+                    var DesignRange = worksheet.Cell("G6").InsertData(DesignData);
+                    var AsBuiltRange = worksheet.Cell("L6").InsertData(AsBuiltData);
 
 
 
                     //NEED TO REORDER THE FIRST TABLE SHOWING THE ERROR
                     #region ReorderingColumns
-                    var ColARangeData = worksheet.Range($"A5:A{5 + ErrorWith3D.Count}");
-                    var ColBRangeData = worksheet.Range($"B5:B{5 + ErrorWith3D.Count}");
-                    var ColCRangeData = worksheet.Range($"C5:C{5 + ErrorWith3D.Count}");
-                    var ColDRangeData = worksheet.Range($"D5:D{5 + ErrorWith3D.Count}");
-                    var ColERangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count}");
+                    var ColARangeData = worksheet.Range($"A6:A{6 + ErrorWith3D.Count}");
+                    var ColBRangeData = worksheet.Range($"B6:B{6 + ErrorWith3D.Count}");
+                    var ColCRangeData = worksheet.Range($"C6:C{6 + ErrorWith3D.Count}");
+                    var ColDRangeData = worksheet.Range($"D6:D{6 + ErrorWith3D.Count}");
+                    var ColERangeData = worksheet.Range($"E6:E{6 + ErrorWith3D.Count}");
 
-                    var targetCellA = worksheet.Cell("A5"); //col A
-                    var targetCellB = worksheet.Cell("B5"); //col B 
-                    var targetCellC = worksheet.Cell("C5"); //Col C
-                    var targetCellD = worksheet.Cell("D5"); //col D 
-                    var targetCellE = worksheet.Cell("E5"); //col E
+                    var targetCellA = worksheet.Cell("A6"); //col A
+                    var targetCellB = worksheet.Cell("B6"); //col B 
+                    var targetCellC = worksheet.Cell("C6"); //Col C
+                    var targetCellD = worksheet.Cell("D6"); //col D 
+                    var targetCellE = worksheet.Cell("E6"); //col E
 
                     //COPY THE DATA OUTSIDE THE RANGE OF THE WORKSHEET
 
-                    var targetCellR = worksheet.Cell("R5"); //col R
-                    var targetCellS = worksheet.Cell("S5"); //col S 
-                    var targetCellT = worksheet.Cell("T5"); //Col T
-                    var targetCellU = worksheet.Cell("U5"); //col U 
-                    var targetCellV = worksheet.Cell("V5"); //col V
+                    var targetCellR = worksheet.Cell("R6"); //col R
+                    var targetCellS = worksheet.Cell("S6"); //col S 
+                    var targetCellT = worksheet.Cell("T6"); //Col T
+                    var targetCellU = worksheet.Cell("U6"); //col U 
+                    var targetCellV = worksheet.Cell("V6"); //col V
 
                     ColBRangeData.CopyTo(targetCellR);
                     ColARangeData.CopyTo(targetCellV);
@@ -162,11 +179,11 @@ namespace StakeOutReport_WinForms
                     ColERangeData.CopyTo(targetCellU);
 
                     //NOW MOVE IT BACK INTO THE CORRECT CELLS FROM TABLE 1
-                    var ColRRangeData = worksheet.Range($"R5:R{5 + ErrorWith3D.Count}");
-                    var ColSRangeData = worksheet.Range($"S5:S{5 + ErrorWith3D.Count}");
-                    var ColTRangeData = worksheet.Range($"T5:T{5 + ErrorWith3D.Count}");
-                    var ColURangeData = worksheet.Range($"U5:U{5 + ErrorWith3D.Count}");
-                    var ColVRangeData = worksheet.Range($"V5:V{5 + ErrorWith3D.Count}");
+                    var ColRRangeData = worksheet.Range($"R6:R{6 + ErrorWith3D.Count}");
+                    var ColSRangeData = worksheet.Range($"S6:S{6 + ErrorWith3D.Count}");
+                    var ColTRangeData = worksheet.Range($"T6:T{6 + ErrorWith3D.Count}");
+                    var ColURangeData = worksheet.Range($"U6:U{6 + ErrorWith3D.Count}");
+                    var ColVRangeData = worksheet.Range($"V6:V{6 + ErrorWith3D.Count}");
 
                     ColRRangeData.CopyTo(targetCellA);
                     ColSRangeData.CopyTo(targetCellB);
@@ -184,7 +201,7 @@ namespace StakeOutReport_WinForms
                     //NOW GET THE RANGE OF CELLS THAT CONTAIN THE ERROR COLUMN
                     if(DefineErrorCheckBox.Checked && !string.IsNullOrEmpty(ToleranceTextBox.Text))
                     {
-                        var ErrorRangeData = worksheet.Range($"E5:E{5 + ErrorWith3D.Count - 1}");
+                        var ErrorRangeData = worksheet.Range($"E6:E{6 + ErrorWith3D.Count - 1}");
                         foreach (var cell in ErrorRangeData.Cells())
                         {
                             //MAY NEED TO ADD AN EMPTY CELL CHECK HERE
@@ -193,7 +210,8 @@ namespace StakeOutReport_WinForms
                             var cellValue = decimal.Parse(cell.Value.ToString());
                             if (cellValue > DefinedErrorTolerance)
                             {
-                                worksheet.Range($"A{cell.Address.RowNumber}:{cell.Address}").Style.Fill.BackgroundColor = XLColor.Red;
+                                worksheet.Range($"A{cell.Address.RowNumber}:{cell.Address}").Style.
+                                    Fill.BackgroundColor = XLColor.Jasper;
                             }
                         }
                     }
@@ -203,8 +221,21 @@ namespace StakeOutReport_WinForms
                     //IF 2D ERROR OPTION IS SELECTED, N/A WILL BE APPENDED TO THE DIFFERENCE IN ELEVATION COLUMN TO SHOW IT IS NOT BEING USED WITHIN THE ERROR CALC
                     if (Error2DCheckBox.Checked) //TEMP
                     {
-                        var ElevationRange = worksheet.Range($"D5:D{5 + ErrorWith3D.Count - 1}");
-                        ElevationRange.Cells().Value = "N/A";
+                        var ElevationRange = worksheet.Range($"D6:D{6 + ErrorWith3D.Count - 1}");
+
+                        //ONLY ADDS N/A TO CELLS THAT HAVE CURRENT DATA
+                        ElevationRange.Cells()
+                            .Where(cell => !worksheet.Cell($"B{cell.Address.RowNumber}").IsEmpty())
+                            .ToList()
+                            .ForEach(cell => cell.Value = "N/A");
+
+                        //foreach (var cell in ElevationRange.Cells())
+                        //{
+                        //    //var CurrentCell = worksheet.Cell($"B{cell.Address.RowNumber}")
+                        //    if (worksheet.Cell($"B{cell.Address.RowNumber}").IsEmpty())
+                        //        continue;
+                        //    cell.Value = "N/A";
+                        //}
                     }
 
 
