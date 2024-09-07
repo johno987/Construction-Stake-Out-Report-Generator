@@ -102,6 +102,8 @@ namespace StakeOutReport_WinForms
             // 
             DesignDataFilePathTextBox.Location = new System.Drawing.Point(176, 88);
             DesignDataFilePathTextBox.Name = "DesignDataFilePathTextBox";
+            DesignDataFilePathTextBox.PlaceholderText = "Design Data File Path";
+            DesignDataFilePathTextBox.ReadOnly = true;
             DesignDataFilePathTextBox.Size = new Size(489, 23);
             DesignDataFilePathTextBox.TabIndex = 3;
             // 
@@ -109,6 +111,8 @@ namespace StakeOutReport_WinForms
             // 
             AsBuiltDataFilePathTextBox.Location = new System.Drawing.Point(176, 176);
             AsBuiltDataFilePathTextBox.Name = "AsBuiltDataFilePathTextBox";
+            AsBuiltDataFilePathTextBox.PlaceholderText = "As-Built Data File Path";
+            AsBuiltDataFilePathTextBox.ReadOnly = true;
             AsBuiltDataFilePathTextBox.Size = new Size(489, 23);
             AsBuiltDataFilePathTextBox.TabIndex = 4;
             // 
@@ -428,9 +432,11 @@ namespace StakeOutReport_WinForms
             ToleranceTextBox.MaxLength = 10;
             ToleranceTextBox.Name = "ToleranceTextBox";
             ToleranceTextBox.PlaceholderText = "5mm";
-            ToleranceTextBox.Size = new Size(101, 23);
+            ToleranceTextBox.Size = new Size(77, 23);
             ToleranceTextBox.TabIndex = 31;
             ToleranceTextBox.Visible = false;
+            ToleranceTextBox.TextChanged += ToleranceTextBox_TextChanged;
+            ToleranceTextBox.KeyPress += ToleranceTextBox_KeyPress;
             // 
             // StakeOutReport
             // 

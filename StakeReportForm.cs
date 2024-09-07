@@ -16,10 +16,11 @@ namespace StakeOutReport_WinForms
         List<Point> DesignData = new(); //Both Design and AsBuilt info is read into here
         List<Point> AsBuiltData = new();
         List<Point> ErrorInPoints = new(); //essentially stores the difference between the design and as built
-        public List<PointError3D> ErrorWith3D = new();
+        List<PointError3D> ErrorWith3D = new();
         string? AsBuiltPrefixSelection;
         string? ProjectTitle;
         string? ElementOfWorks;
+        decimal? DefinedErrorTolerance;
 
         public StakeOutReport()
         {
@@ -31,6 +32,27 @@ namespace StakeOutReport_WinForms
         private void DefineErrorCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             ToleranceTextBox.Visible = !ToleranceTextBox.Visible;
+            ToleranceTextBox.Text = null;
+        }
+
+        private void ToleranceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!isValid(e.KeyChar))
+            {
+                e.Handled = true; //wont allow us to enter non integers 
+            }
+        }
+
+
+        private void ToleranceTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ToleranceTextBox.Text))
+                DefinedErrorTolerance = decimal.Parse(ToleranceTextBox.Text);
+        }
+
+        private bool isValid(char keyChar)
+        {
+            return char.IsControl(keyChar) || (char.IsDigit(keyChar));
         }
 
     }
