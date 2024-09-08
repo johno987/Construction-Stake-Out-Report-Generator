@@ -66,7 +66,7 @@ namespace StakeOutReport_WinForms
                     worksheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     worksheet.Cell("D1").Style.Fill.BackgroundColor = XLColor.AshGrey;
 
-                    worksheet.Cell("D2").Value = DefinedErrorTolerance;
+                    worksheet.Cell("D2").Value = DefinedErrorTolerance == null ? "N/A" : DefinedErrorTolerance;
                     worksheet.Cell("D2").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
                     worksheet.Cell("D2").Style.Fill.BackgroundColor = XLColor.AshGrey;
 
