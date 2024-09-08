@@ -50,16 +50,16 @@ Feel free to fork this repository and submit pull requests to help improve this 
 ## Screenshots
 
 ## Main Interface
-![Main UI]("Screenshots/Main UI.png")
+![Main UI](Screenshots/Main%20UI.png)
 
 ## Data Loaded
-![Data Loaded]("Screenshots/Data Loaded.png")
+![Data Loaded](Screenshots/Data%20Loaded.png)
 
 ## Excel Report
-![Excel Report]("Screenshots/Excel Report.png")
+![Excel Report](Screenshots/Excel%20Report.png)
 
 ## PDF Report
-![PDF Report]("Screenshots/PDF Report.png")
+![PDF Report](Screenshots/PDF%20Report.png)
 
 ## 📝 License
 
