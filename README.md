@@ -7,6 +7,7 @@
 - **Upload Design Data:** Easily import design data from the construction team to compare with staked points.
 - **Stakeout Accuracy Reporting:** Automatically calculate the accuracy of staked points and generate a detailed report.
 - **Positional Tolerance Analysis:** Identify any points that have exceeded positional tolerances and highlight them in the report.
+- **As-Built Data Sanitisation:** Any control points or station set ups within the As-Built data will be automatically erased from the input, leading to clean and concise reports.
 - **User-Friendly Interface:** Simple and intuitive WinForms-based UI for ease of use by field engineers.
 
 ## 🚀 How It Works
