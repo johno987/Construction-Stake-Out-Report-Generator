@@ -47,6 +47,20 @@ The **Stakeout Report Generator** is ideal for:
 
 Feel free to fork this repository and submit pull requests to help improve this project.
 
+## Screenshots
+
+## Main Interface
+![Main UI]("Screenshots/Main UI.png")
+
+## Data Loaded
+![Data Loaded]("Screenshots/Data Loaded.png")
+
+## Excel Report
+![Excel Report]("Screenshots/Excel Report.png")
+
+## PDF Report
+![PDF Report]("Screenshots/PDF Report.png")
+
 ## 📝 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
