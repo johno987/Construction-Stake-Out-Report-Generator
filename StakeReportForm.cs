@@ -28,5 +28,6 @@ namespace StakeOutReport_WinForms
             SetCurrentDate();
             InitialiseComboBox();
         }
+
     }
 }

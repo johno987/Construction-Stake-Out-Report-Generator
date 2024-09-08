@@ -70,51 +70,30 @@ namespace StakeOutReport_WinForms
             // 
             // TitleLabel
             // 
-            TitleLabel.AutoSize = true;
-            TitleLabel.Font = new Font("Arial", 15F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            TitleLabel.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(TitleLabel, "TitleLabel");
             TitleLabel.Name = "TitleLabel";
-            TitleLabel.Size = new Size(337, 23);
-            TitleLabel.TabIndex = 0;
-            TitleLabel.Text = "STAKE OUT REPORT GENERATOR";
             // 
             // BrowseDesignDataLabel
             // 
-            BrowseDesignDataLabel.AutoSize = true;
-            BrowseDesignDataLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            BrowseDesignDataLabel.Location = new System.Drawing.Point(12, 57);
+            resources.ApplyResources(BrowseDesignDataLabel, "BrowseDesignDataLabel");
             BrowseDesignDataLabel.Name = "BrowseDesignDataLabel";
-            BrowseDesignDataLabel.Size = new Size(165, 16);
-            BrowseDesignDataLabel.TabIndex = 1;
-            BrowseDesignDataLabel.Text = "Browse For Design Data:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(12, 141);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new Size(168, 16);
-            label1.TabIndex = 2;
-            label1.Text = "Browse For As-Built Data:";
             // 
             // DesignDataFilePathTextBox
             // 
-            DesignDataFilePathTextBox.Location = new System.Drawing.Point(176, 88);
+            resources.ApplyResources(DesignDataFilePathTextBox, "DesignDataFilePathTextBox");
             DesignDataFilePathTextBox.Name = "DesignDataFilePathTextBox";
-            DesignDataFilePathTextBox.PlaceholderText = "Design Data File Path";
             DesignDataFilePathTextBox.ReadOnly = true;
-            DesignDataFilePathTextBox.Size = new Size(489, 23);
-            DesignDataFilePathTextBox.TabIndex = 3;
             // 
             // AsBuiltDataFilePathTextBox
             // 
-            AsBuiltDataFilePathTextBox.Location = new System.Drawing.Point(176, 176);
+            resources.ApplyResources(AsBuiltDataFilePathTextBox, "AsBuiltDataFilePathTextBox");
             AsBuiltDataFilePathTextBox.Name = "AsBuiltDataFilePathTextBox";
-            AsBuiltDataFilePathTextBox.PlaceholderText = "As-Built Data File Path";
             AsBuiltDataFilePathTextBox.ReadOnly = true;
-            AsBuiltDataFilePathTextBox.Size = new Size(489, 23);
-            AsBuiltDataFilePathTextBox.TabIndex = 4;
             // 
             // BrowseDesignDataDialog
             // 
@@ -122,44 +101,30 @@ namespace StakeOutReport_WinForms
             // 
             // BrowseDesignDataButton
             // 
-            BrowseDesignDataButton.Location = new System.Drawing.Point(25, 88);
+            resources.ApplyResources(BrowseDesignDataButton, "BrowseDesignDataButton");
             BrowseDesignDataButton.Name = "BrowseDesignDataButton";
-            BrowseDesignDataButton.Size = new Size(127, 23);
-            BrowseDesignDataButton.TabIndex = 5;
-            BrowseDesignDataButton.Text = "Browse Design Data";
             BrowseDesignDataButton.UseVisualStyleBackColor = true;
             BrowseDesignDataButton.Click += BrowseDesignDataButton_Click;
             // 
             // BrowseAsBuiltData
             // 
-            BrowseAsBuiltData.Location = new System.Drawing.Point(25, 176);
+            resources.ApplyResources(BrowseAsBuiltData, "BrowseAsBuiltData");
             BrowseAsBuiltData.Name = "BrowseAsBuiltData";
-            BrowseAsBuiltData.Size = new Size(127, 23);
-            BrowseAsBuiltData.TabIndex = 6;
-            BrowseAsBuiltData.Text = "Browse As-Built Data";
             BrowseAsBuiltData.UseVisualStyleBackColor = true;
             BrowseAsBuiltData.Click += BrowseAsBuiltData_Click;
             // 
             // ConfirmChoiceAndReadButton
             // 
             ConfirmChoiceAndReadButton.BackColor = Color.White;
-            ConfirmChoiceAndReadButton.Location = new System.Drawing.Point(12, 348);
+            resources.ApplyResources(ConfirmChoiceAndReadButton, "ConfirmChoiceAndReadButton");
             ConfirmChoiceAndReadButton.Name = "ConfirmChoiceAndReadButton";
-            ConfirmChoiceAndReadButton.Size = new Size(174, 35);
-            ConfirmChoiceAndReadButton.TabIndex = 7;
-            ConfirmChoiceAndReadButton.Text = "Confirm Choice And Read";
             ConfirmChoiceAndReadButton.UseVisualStyleBackColor = false;
             ConfirmChoiceAndReadButton.Click += ConfirmChoiceAndReadButton_Click;
             // 
             // ReadStatusLabel
             // 
-            ReadStatusLabel.AutoSize = true;
-            ReadStatusLabel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ReadStatusLabel.Location = new System.Drawing.Point(21, 407);
+            resources.ApplyResources(ReadStatusLabel, "ReadStatusLabel");
             ReadStatusLabel.Name = "ReadStatusLabel";
-            ReadStatusLabel.Size = new Size(108, 18);
-            ReadStatusLabel.TabIndex = 8;
-            ReadStatusLabel.Text = "No Data Read";
             // 
             // DesignDataTable
             // 
@@ -169,12 +134,9 @@ namespace StakeOutReport_WinForms
             DesignDataTable.BorderStyle = BorderStyle.Fixed3D;
             DesignDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DesignDataTable.GridColor = Color.Black;
-            DesignDataTable.Location = new System.Drawing.Point(831, 88);
+            resources.ApplyResources(DesignDataTable, "DesignDataTable");
             DesignDataTable.Name = "DesignDataTable";
             DesignDataTable.ReadOnly = true;
-            DesignDataTable.RowHeadersWidth = 62;
-            DesignDataTable.Size = new Size(333, 199);
-            DesignDataTable.TabIndex = 9;
             // 
             // AsBuiltDataTable
             // 
@@ -184,69 +146,37 @@ namespace StakeOutReport_WinForms
             AsBuiltDataTable.BorderStyle = BorderStyle.Fixed3D;
             AsBuiltDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AsBuiltDataTable.GridColor = Color.Black;
-            AsBuiltDataTable.Location = new System.Drawing.Point(1181, 88);
+            resources.ApplyResources(AsBuiltDataTable, "AsBuiltDataTable");
             AsBuiltDataTable.Name = "AsBuiltDataTable";
             AsBuiltDataTable.ReadOnly = true;
-            AsBuiltDataTable.RowHeadersWidth = 62;
-            AsBuiltDataTable.Size = new Size(333, 199);
-            AsBuiltDataTable.TabIndex = 10;
             // 
             // DesignDataPreviewLabel
             // 
-            DesignDataPreviewLabel.AutoSize = true;
-            DesignDataPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            DesignDataPreviewLabel.Location = new System.Drawing.Point(831, 70);
+            resources.ApplyResources(DesignDataPreviewLabel, "DesignDataPreviewLabel");
             DesignDataPreviewLabel.Name = "DesignDataPreviewLabel";
-            DesignDataPreviewLabel.Size = new Size(114, 15);
-            DesignDataPreviewLabel.TabIndex = 11;
-            DesignDataPreviewLabel.Text = "Design Data Preview";
-            DesignDataPreviewLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // AsBuiltDataPreviewLabel
             // 
-            AsBuiltDataPreviewLabel.AutoSize = true;
-            AsBuiltDataPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            AsBuiltDataPreviewLabel.Location = new System.Drawing.Point(1181, 70);
+            resources.ApplyResources(AsBuiltDataPreviewLabel, "AsBuiltDataPreviewLabel");
             AsBuiltDataPreviewLabel.Name = "AsBuiltDataPreviewLabel";
-            AsBuiltDataPreviewLabel.Size = new Size(120, 15);
-            AsBuiltDataPreviewLabel.TabIndex = 12;
-            AsBuiltDataPreviewLabel.Text = "As-Built Data Preview";
-            AsBuiltDataPreviewLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // CurrentDate
             // 
-            CurrentDate.AutoSize = true;
-            CurrentDate.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            CurrentDate.Location = new System.Drawing.Point(1448, 12);
+            resources.ApplyResources(CurrentDate, "CurrentDate");
             CurrentDate.Name = "CurrentDate";
-            CurrentDate.Size = new Size(125, 20);
-            CurrentDate.TabIndex = 13;
-            CurrentDate.Text = "DatePlaceHolder";
-            CurrentDate.TextAlign = ContentAlignment.TopCenter;
             // 
             // CalculateErrorButton
             // 
             CalculateErrorButton.BackColor = Color.White;
-            CalculateErrorButton.Location = new System.Drawing.Point(831, 312);
+            resources.ApplyResources(CalculateErrorButton, "CalculateErrorButton");
             CalculateErrorButton.Name = "CalculateErrorButton";
-            CalculateErrorButton.Size = new Size(174, 35);
-            CalculateErrorButton.TabIndex = 14;
-            CalculateErrorButton.Text = "Calculate Error";
             CalculateErrorButton.UseVisualStyleBackColor = false;
-            CalculateErrorButton.Visible = false;
             CalculateErrorButton.Click += CalculateErrorButton_Click;
             // 
             // ErrorPreviewLabel
             // 
-            ErrorPreviewLabel.AutoSize = true;
-            ErrorPreviewLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
-            ErrorPreviewLabel.Location = new System.Drawing.Point(831, 368);
+            resources.ApplyResources(ErrorPreviewLabel, "ErrorPreviewLabel");
             ErrorPreviewLabel.Name = "ErrorPreviewLabel";
-            ErrorPreviewLabel.Size = new Size(76, 15);
-            ErrorPreviewLabel.TabIndex = 16;
-            ErrorPreviewLabel.Text = "Error Preview";
-            ErrorPreviewLabel.TextAlign = ContentAlignment.TopCenter;
-            ErrorPreviewLabel.Visible = false;
             // 
             // ErrorPreviewDataTable
             // 
@@ -257,194 +187,106 @@ namespace StakeOutReport_WinForms
             ErrorPreviewDataTable.BorderStyle = BorderStyle.Fixed3D;
             ErrorPreviewDataTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ErrorPreviewDataTable.GridColor = Color.Black;
-            ErrorPreviewDataTable.Location = new System.Drawing.Point(831, 396);
+            resources.ApplyResources(ErrorPreviewDataTable, "ErrorPreviewDataTable");
             ErrorPreviewDataTable.Name = "ErrorPreviewDataTable";
             ErrorPreviewDataTable.ReadOnly = true;
-            ErrorPreviewDataTable.RowHeadersWidth = 62;
-            ErrorPreviewDataTable.Size = new Size(333, 276);
-            ErrorPreviewDataTable.TabIndex = 15;
-            ErrorPreviewDataTable.Visible = false;
             // 
             // PrefixSelector
             // 
             PrefixSelector.FormattingEnabled = true;
-            PrefixSelector.Location = new System.Drawing.Point(228, 231);
+            resources.ApplyResources(PrefixSelector, "PrefixSelector");
             PrefixSelector.Name = "PrefixSelector";
-            PrefixSelector.Size = new Size(85, 23);
-            PrefixSelector.TabIndex = 17;
             PrefixSelector.SelectedIndexChanged += PrefixSelector_SelectedIndexChanged;
             // 
             // AsBuiltPrefixLabel
             // 
-            AsBuiltPrefixLabel.AutoSize = true;
-            AsBuiltPrefixLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            AsBuiltPrefixLabel.Location = new System.Drawing.Point(2, 233);
+            resources.ApplyResources(AsBuiltPrefixLabel, "AsBuiltPrefixLabel");
             AsBuiltPrefixLabel.Name = "AsBuiltPrefixLabel";
-            AsBuiltPrefixLabel.Size = new Size(201, 16);
-            AsBuiltPrefixLabel.TabIndex = 18;
-            AsBuiltPrefixLabel.Text = "Define The As-Built Data Prefix";
             // 
             // CustomPrefixTextBox
             // 
-            CustomPrefixTextBox.Location = new System.Drawing.Point(12, 281);
-            CustomPrefixTextBox.MaxLength = 10;
+            resources.ApplyResources(CustomPrefixTextBox, "CustomPrefixTextBox");
             CustomPrefixTextBox.Name = "CustomPrefixTextBox";
-            CustomPrefixTextBox.PlaceholderText = "Custom";
-            CustomPrefixTextBox.Size = new Size(301, 23);
-            CustomPrefixTextBox.TabIndex = 19;
-            CustomPrefixTextBox.Visible = false;
             CustomPrefixTextBox.TextChanged += CustomPrefixTextBox_TextChanged;
             // 
             // PDFCheckBox
             // 
-            PDFCheckBox.AutoSize = true;
-            PDFCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            PDFCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PDFCheckBox.Location = new System.Drawing.Point(21, 506);
+            resources.ApplyResources(PDFCheckBox, "PDFCheckBox");
             PDFCheckBox.Name = "PDFCheckBox";
-            PDFCheckBox.Size = new Size(52, 20);
-            PDFCheckBox.TabIndex = 20;
-            PDFCheckBox.Text = "PDF";
             PDFCheckBox.UseVisualStyleBackColor = true;
-            PDFCheckBox.Visible = false;
             // 
             // ReportOptionsLabel
             // 
-            ReportOptionsLabel.AutoSize = true;
-            ReportOptionsLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            ReportOptionsLabel.Location = new System.Drawing.Point(12, 471);
+            resources.ApplyResources(ReportOptionsLabel, "ReportOptionsLabel");
             ReportOptionsLabel.Name = "ReportOptionsLabel";
-            ReportOptionsLabel.Size = new Size(122, 16);
-            ReportOptionsLabel.TabIndex = 21;
-            ReportOptionsLabel.Text = "Generate Report?";
-            ReportOptionsLabel.Visible = false;
             // 
             // CSVCheckBox
             // 
-            CSVCheckBox.AutoSize = true;
-            CSVCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            CSVCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CSVCheckBox.Location = new System.Drawing.Point(21, 548);
+            resources.ApplyResources(CSVCheckBox, "CSVCheckBox");
             CSVCheckBox.Name = "CSVCheckBox";
-            CSVCheckBox.Size = new Size(53, 20);
-            CSVCheckBox.TabIndex = 22;
-            CSVCheckBox.Text = "CSV";
             CSVCheckBox.UseVisualStyleBackColor = true;
-            CSVCheckBox.Visible = false;
             // 
             // GenerateReportButton
             // 
             GenerateReportButton.BackColor = Color.White;
-            GenerateReportButton.Location = new System.Drawing.Point(6, 724);
+            resources.ApplyResources(GenerateReportButton, "GenerateReportButton");
             GenerateReportButton.Name = "GenerateReportButton";
-            GenerateReportButton.Size = new Size(174, 35);
-            GenerateReportButton.TabIndex = 23;
-            GenerateReportButton.Text = "Generate Selected Reports";
             GenerateReportButton.UseVisualStyleBackColor = false;
-            GenerateReportButton.Visible = false;
             GenerateReportButton.Click += GenerateReportButton_Click;
             // 
             // ProjectNameTextBox
             // 
-            ProjectNameTextBox.Location = new System.Drawing.Point(12, 616);
-            ProjectNameTextBox.MaxLength = 30;
+            resources.ApplyResources(ProjectNameTextBox, "ProjectNameTextBox");
             ProjectNameTextBox.Name = "ProjectNameTextBox";
-            ProjectNameTextBox.PlaceholderText = "Project Title";
-            ProjectNameTextBox.Size = new Size(489, 23);
-            ProjectNameTextBox.TabIndex = 25;
-            ProjectNameTextBox.Visible = false;
             ProjectNameTextBox.TextChanged += ProjectNameTextBox_TextChanged;
             // 
             // ProjectNameLabel
             // 
-            ProjectNameLabel.AutoSize = true;
-            ProjectNameLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            ProjectNameLabel.Location = new System.Drawing.Point(12, 586);
+            resources.ApplyResources(ProjectNameLabel, "ProjectNameLabel");
             ProjectNameLabel.Name = "ProjectNameLabel";
-            ProjectNameLabel.Size = new Size(91, 16);
-            ProjectNameLabel.TabIndex = 24;
-            ProjectNameLabel.Text = "Project Name";
-            ProjectNameLabel.Visible = false;
             // 
             // ElementOfWorksTextBox
             // 
-            ElementOfWorksTextBox.Location = new System.Drawing.Point(12, 686);
-            ElementOfWorksTextBox.MaxLength = 100;
+            resources.ApplyResources(ElementOfWorksTextBox, "ElementOfWorksTextBox");
             ElementOfWorksTextBox.Name = "ElementOfWorksTextBox";
-            ElementOfWorksTextBox.PlaceholderText = "Works Set Out";
-            ElementOfWorksTextBox.Size = new Size(489, 23);
-            ElementOfWorksTextBox.TabIndex = 27;
-            ElementOfWorksTextBox.Visible = false;
             ElementOfWorksTextBox.TextChanged += ElementOfWorksTextBox_TextChanged;
             // 
             // ElementOfWorksLabel
             // 
-            ElementOfWorksLabel.AutoSize = true;
-            ElementOfWorksLabel.Font = new Font("Arial", 10F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            ElementOfWorksLabel.Location = new System.Drawing.Point(12, 656);
+            resources.ApplyResources(ElementOfWorksLabel, "ElementOfWorksLabel");
             ElementOfWorksLabel.Name = "ElementOfWorksLabel";
-            ElementOfWorksLabel.Size = new Size(121, 16);
-            ElementOfWorksLabel.TabIndex = 26;
-            ElementOfWorksLabel.Text = "Element Of Works";
-            ElementOfWorksLabel.Visible = false;
             // 
             // Error2DCheckBox
             // 
-            Error2DCheckBox.AutoSize = true;
-            Error2DCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            Error2DCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Error2DCheckBox.Location = new System.Drawing.Point(1046, 320);
+            resources.ApplyResources(Error2DCheckBox, "Error2DCheckBox");
             Error2DCheckBox.Name = "Error2DCheckBox";
-            Error2DCheckBox.Size = new Size(244, 20);
-            Error2DCheckBox.TabIndex = 28;
-            Error2DCheckBox.Text = "Exclude elevation in error calculation?";
             Error2DCheckBox.UseVisualStyleBackColor = true;
-            Error2DCheckBox.Visible = false;
             // 
             // WaterMarkLabel
             // 
-            WaterMarkLabel.Font = new Font("Arial", 8.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            resources.ApplyResources(WaterMarkLabel, "WaterMarkLabel");
             WaterMarkLabel.ForeColor = SystemColors.ControlDarkDark;
-            WaterMarkLabel.Location = new System.Drawing.Point(1387, 714);
             WaterMarkLabel.Name = "WaterMarkLabel";
-            WaterMarkLabel.Size = new Size(173, 38);
-            WaterMarkLabel.TabIndex = 29;
-            WaterMarkLabel.Text = "Software created by W,Johnson V1.0.0";
-            WaterMarkLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // DefineErrorCheckBox
             // 
-            DefineErrorCheckBox.AutoSize = true;
-            DefineErrorCheckBox.CheckAlign = ContentAlignment.MiddleRight;
-            DefineErrorCheckBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DefineErrorCheckBox.Location = new System.Drawing.Point(1208, 396);
+            resources.ApplyResources(DefineErrorCheckBox, "DefineErrorCheckBox");
             DefineErrorCheckBox.Name = "DefineErrorCheckBox";
-            DefineErrorCheckBox.Size = new Size(156, 20);
-            DefineErrorCheckBox.TabIndex = 30;
-            DefineErrorCheckBox.Text = "Define error tolerance?";
             DefineErrorCheckBox.UseVisualStyleBackColor = true;
-            DefineErrorCheckBox.Visible = false;
             DefineErrorCheckBox.CheckedChanged += DefineErrorCheckBox_CheckedChanged;
             // 
             // ToleranceTextBox
             // 
-            ToleranceTextBox.Location = new System.Drawing.Point(1213, 422);
-            ToleranceTextBox.MaxLength = 10;
+            resources.ApplyResources(ToleranceTextBox, "ToleranceTextBox");
             ToleranceTextBox.Name = "ToleranceTextBox";
-            ToleranceTextBox.PlaceholderText = "5mm";
-            ToleranceTextBox.Size = new Size(77, 23);
-            ToleranceTextBox.TabIndex = 31;
-            ToleranceTextBox.Visible = false;
             ToleranceTextBox.TextChanged += ToleranceTextBox_TextChanged;
             ToleranceTextBox.KeyPress += ToleranceTextBox_KeyPress;
             // 
             // StakeOutReport
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1572, 761);
             Controls.Add(ToleranceTextBox);
             Controls.Add(DefineErrorCheckBox);
             Controls.Add(WaterMarkLabel);
@@ -477,9 +319,7 @@ namespace StakeOutReport_WinForms
             Controls.Add(label1);
             Controls.Add(BrowseDesignDataLabel);
             Controls.Add(TitleLabel);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "StakeOutReport";
-            Text = "Stake Out Report Generator";
             ((System.ComponentModel.ISupportInitialize)DesignDataTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)AsBuiltDataTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)ErrorPreviewDataTable).EndInit();

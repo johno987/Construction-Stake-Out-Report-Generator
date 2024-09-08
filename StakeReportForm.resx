@@ -117,13 +117,1033 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15pt, style=Underline</value>
+  </data>
+  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 12</value>
+  </data>
+  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 28</value>
+  </data>
+  <data name="TitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TitleLabel.Text" xml:space="preserve">
+    <value>STAKE OUT REPORT GENERATOR</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Name" xml:space="preserve">
+    <value>TitleLabel</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="BrowseDesignDataLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BrowseDesignDataLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="BrowseDesignDataLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 76</value>
+  </data>
+  <data name="BrowseDesignDataLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 19</value>
+  </data>
+  <data name="BrowseDesignDataLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BrowseDesignDataLabel.Text" xml:space="preserve">
+    <value>Browse For Design Data:</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataLabel.Name" xml:space="preserve">
+    <value>BrowseDesignDataLabel</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataLabel.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 188</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Browse For As-Built Data:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="DesignDataFilePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 117</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DesignDataFilePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DesignDataFilePathTextBox.PlaceholderText" xml:space="preserve">
+    <value>Design Data File Path</value>
+  </data>
+  <data name="DesignDataFilePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 27</value>
+  </data>
+  <data name="DesignDataFilePathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;DesignDataFilePathTextBox.Name" xml:space="preserve">
+    <value>DesignDataFilePathTextBox</value>
+  </data>
+  <data name="&gt;&gt;DesignDataFilePathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DesignDataFilePathTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DesignDataFilePathTextBox.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="AsBuiltDataFilePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 235</value>
+  </data>
+  <data name="AsBuiltDataFilePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="AsBuiltDataFilePathTextBox.PlaceholderText" xml:space="preserve">
+    <value>As-Built Data File Path</value>
+  </data>
+  <data name="AsBuiltDataFilePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 27</value>
+  </data>
+  <data name="AsBuiltDataFilePathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataFilePathTextBox.Name" xml:space="preserve">
+    <value>AsBuiltDataFilePathTextBox</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataFilePathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataFilePathTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataFilePathTextBox.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
   <metadata name="BrowseDesignDataDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="BrowseDesignDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 117</value>
+  </data>
+  <data name="BrowseDesignDataButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BrowseDesignDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 31</value>
+  </data>
+  <data name="BrowseDesignDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BrowseDesignDataButton.Text" xml:space="preserve">
+    <value>Browse Design Data</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataButton.Name" xml:space="preserve">
+    <value>BrowseDesignDataButton</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataButton.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="BrowseAsBuiltData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 235</value>
+  </data>
+  <data name="BrowseAsBuiltData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BrowseAsBuiltData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 31</value>
+  </data>
+  <data name="BrowseAsBuiltData.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BrowseAsBuiltData.Text" xml:space="preserve">
+    <value>Browse As-Built Data</value>
+  </data>
+  <data name="&gt;&gt;BrowseAsBuiltData.Name" xml:space="preserve">
+    <value>BrowseAsBuiltData</value>
+  </data>
+  <data name="&gt;&gt;BrowseAsBuiltData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseAsBuiltData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BrowseAsBuiltData.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ConfirmChoiceAndReadButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 464</value>
+  </data>
+  <data name="ConfirmChoiceAndReadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ConfirmChoiceAndReadButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 47</value>
+  </data>
+  <data name="ConfirmChoiceAndReadButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ConfirmChoiceAndReadButton.Text" xml:space="preserve">
+    <value>Confirm Choice And Read</value>
+  </data>
+  <data name="&gt;&gt;ConfirmChoiceAndReadButton.Name" xml:space="preserve">
+    <value>ConfirmChoiceAndReadButton</value>
+  </data>
+  <data name="&gt;&gt;ConfirmChoiceAndReadButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfirmChoiceAndReadButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfirmChoiceAndReadButton.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="ReadStatusLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ReadStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="ReadStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 543</value>
+  </data>
+  <data name="ReadStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 23</value>
+  </data>
+  <data name="ReadStatusLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ReadStatusLabel.Text" xml:space="preserve">
+    <value>No Data Read</value>
+  </data>
+  <data name="&gt;&gt;ReadStatusLabel.Name" xml:space="preserve">
+    <value>ReadStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;ReadStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReadStatusLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ReadStatusLabel.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="DesignDataTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 117</value>
+  </data>
+  <data name="DesignDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DesignDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="DesignDataTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 265</value>
+  </data>
+  <data name="DesignDataTable.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;DesignDataTable.Name" xml:space="preserve">
+    <value>DesignDataTable</value>
+  </data>
+  <data name="&gt;&gt;DesignDataTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DesignDataTable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DesignDataTable.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="AsBuiltDataTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1350, 117</value>
+  </data>
+  <data name="AsBuiltDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="AsBuiltDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="AsBuiltDataTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 265</value>
+  </data>
+  <data name="AsBuiltDataTable.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataTable.Name" xml:space="preserve">
+    <value>AsBuiltDataTable</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataTable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataTable.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="DesignDataPreviewLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DesignDataPreviewLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Underline</value>
+  </data>
+  <data name="DesignDataPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 93</value>
+  </data>
+  <data name="DesignDataPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 20</value>
+  </data>
+  <data name="DesignDataPreviewLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="DesignDataPreviewLabel.Text" xml:space="preserve">
+    <value>Design Data Preview</value>
+  </data>
+  <data name="DesignDataPreviewLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;DesignDataPreviewLabel.Name" xml:space="preserve">
+    <value>DesignDataPreviewLabel</value>
+  </data>
+  <data name="&gt;&gt;DesignDataPreviewLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DesignDataPreviewLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DesignDataPreviewLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Underline</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1350, 93</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.Text" xml:space="preserve">
+    <value>As-Built Data Preview</value>
+  </data>
+  <data name="AsBuiltDataPreviewLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataPreviewLabel.Name" xml:space="preserve">
+    <value>AsBuiltDataPreviewLabel</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataPreviewLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataPreviewLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltDataPreviewLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="CurrentDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurrentDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt, style=Bold</value>
+  </data>
+  <data name="CurrentDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1655, 16</value>
+  </data>
+  <data name="CurrentDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 25</value>
+  </data>
+  <data name="CurrentDate.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="CurrentDate.Text" xml:space="preserve">
+    <value>DatePlaceHolder</value>
+  </data>
+  <data name="CurrentDate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;CurrentDate.Name" xml:space="preserve">
+    <value>CurrentDate</value>
+  </data>
+  <data name="&gt;&gt;CurrentDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CurrentDate.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="CalculateErrorButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 416</value>
+  </data>
+  <data name="CalculateErrorButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CalculateErrorButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 47</value>
+  </data>
+  <data name="CalculateErrorButton.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="CalculateErrorButton.Text" xml:space="preserve">
+    <value>Calculate Error</value>
+  </data>
+  <data name="CalculateErrorButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CalculateErrorButton.Name" xml:space="preserve">
+    <value>CalculateErrorButton</value>
+  </data>
+  <data name="&gt;&gt;CalculateErrorButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CalculateErrorButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CalculateErrorButton.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="ErrorPreviewLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ErrorPreviewLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Underline</value>
+  </data>
+  <data name="ErrorPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 491</value>
+  </data>
+  <data name="ErrorPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="ErrorPreviewLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="ErrorPreviewLabel.Text" xml:space="preserve">
+    <value>Error Preview</value>
+  </data>
+  <data name="ErrorPreviewLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="ErrorPreviewLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewLabel.Name" xml:space="preserve">
+    <value>ErrorPreviewLabel</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ErrorPreviewDataTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 528</value>
+  </data>
+  <data name="ErrorPreviewDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ErrorPreviewDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="ErrorPreviewDataTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 368</value>
+  </data>
+  <data name="ErrorPreviewDataTable.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ErrorPreviewDataTable.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewDataTable.Name" xml:space="preserve">
+    <value>ErrorPreviewDataTable</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewDataTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewDataTable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ErrorPreviewDataTable.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="PrefixSelector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 308</value>
+  </data>
+  <data name="PrefixSelector.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PrefixSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 28</value>
+  </data>
+  <data name="PrefixSelector.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;PrefixSelector.Name" xml:space="preserve">
+    <value>PrefixSelector</value>
+  </data>
+  <data name="&gt;&gt;PrefixSelector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PrefixSelector.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PrefixSelector.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 311</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 19</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="AsBuiltPrefixLabel.Text" xml:space="preserve">
+    <value>Define The As-Built Data Prefix</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltPrefixLabel.Name" xml:space="preserve">
+    <value>AsBuiltPrefixLabel</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltPrefixLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltPrefixLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AsBuiltPrefixLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="CustomPrefixTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 375</value>
+  </data>
+  <data name="CustomPrefixTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CustomPrefixTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="CustomPrefixTextBox.PlaceholderText" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="CustomPrefixTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 27</value>
+  </data>
+  <data name="CustomPrefixTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="CustomPrefixTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CustomPrefixTextBox.Name" xml:space="preserve">
+    <value>CustomPrefixTextBox</value>
+  </data>
+  <data name="&gt;&gt;CustomPrefixTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CustomPrefixTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CustomPrefixTextBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="PDFCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PDFCheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="PDFCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="PDFCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 675</value>
+  </data>
+  <data name="PDFCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PDFCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="PDFCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="PDFCheckBox.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="PDFCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PDFCheckBox.Name" xml:space="preserve">
+    <value>PDFCheckBox</value>
+  </data>
+  <data name="&gt;&gt;PDFCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PDFCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PDFCheckBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ReportOptionsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ReportOptionsLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="ReportOptionsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 628</value>
+  </data>
+  <data name="ReportOptionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 19</value>
+  </data>
+  <data name="ReportOptionsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="ReportOptionsLabel.Text" xml:space="preserve">
+    <value>Generate Report?</value>
+  </data>
+  <data name="ReportOptionsLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ReportOptionsLabel.Name" xml:space="preserve">
+    <value>ReportOptionsLabel</value>
+  </data>
+  <data name="&gt;&gt;ReportOptionsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReportOptionsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ReportOptionsLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CSVCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CSVCheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="CSVCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="CSVCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 731</value>
+  </data>
+  <data name="CSVCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CSVCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="CSVCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="CSVCheckBox.Text" xml:space="preserve">
+    <value>CSV</value>
+  </data>
+  <data name="CSVCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CSVCheckBox.Name" xml:space="preserve">
+    <value>CSVCheckBox</value>
+  </data>
+  <data name="&gt;&gt;CSVCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CSVCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CSVCheckBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 965</value>
+  </data>
+  <data name="GenerateReportButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="GenerateReportButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 47</value>
+  </data>
+  <data name="GenerateReportButton.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="GenerateReportButton.Text" xml:space="preserve">
+    <value>Generate Selected Reports</value>
+  </data>
+  <data name="GenerateReportButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GenerateReportButton.Name" xml:space="preserve">
+    <value>GenerateReportButton</value>
+  </data>
+  <data name="&gt;&gt;GenerateReportButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GenerateReportButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GenerateReportButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ProjectNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 821</value>
+  </data>
+  <data name="ProjectNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ProjectNameTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="ProjectNameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Project Title</value>
+  </data>
+  <data name="ProjectNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 27</value>
+  </data>
+  <data name="ProjectNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="ProjectNameTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameTextBox.Name" xml:space="preserve">
+    <value>ProjectNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ProjectNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="ProjectNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 781</value>
+  </data>
+  <data name="ProjectNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
+  </data>
+  <data name="ProjectNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="ProjectNameLabel.Text" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectNameLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameLabel.Name" xml:space="preserve">
+    <value>ProjectNameLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectNameLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ElementOfWorksTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 915</value>
+  </data>
+  <data name="ElementOfWorksTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ElementOfWorksTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ElementOfWorksTextBox.PlaceholderText" xml:space="preserve">
+    <value>Works Set Out</value>
+  </data>
+  <data name="ElementOfWorksTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 27</value>
+  </data>
+  <data name="ElementOfWorksTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="ElementOfWorksTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksTextBox.Name" xml:space="preserve">
+    <value>ElementOfWorksTextBox</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ElementOfWorksLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ElementOfWorksLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Underline</value>
+  </data>
+  <data name="ElementOfWorksLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 875</value>
+  </data>
+  <data name="ElementOfWorksLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 19</value>
+  </data>
+  <data name="ElementOfWorksLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="ElementOfWorksLabel.Text" xml:space="preserve">
+    <value>Element Of Works</value>
+  </data>
+  <data name="ElementOfWorksLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksLabel.Name" xml:space="preserve">
+    <value>ElementOfWorksLabel</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ElementOfWorksLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Error2DCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Error2DCheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Error2DCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="Error2DCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1195, 427</value>
+  </data>
+  <data name="Error2DCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Error2DCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 23</value>
+  </data>
+  <data name="Error2DCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="Error2DCheckBox.Text" xml:space="preserve">
+    <value>Exclude elevation in error calculation?</value>
+  </data>
+  <data name="Error2DCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Error2DCheckBox.Name" xml:space="preserve">
+    <value>Error2DCheckBox</value>
+  </data>
+  <data name="&gt;&gt;Error2DCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Error2DCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Error2DCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="WaterMarkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt, style=Underline</value>
+  </data>
+  <data name="WaterMarkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1585, 952</value>
+  </data>
+  <data name="WaterMarkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 51</value>
+  </data>
+  <data name="WaterMarkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="WaterMarkLabel.Text" xml:space="preserve">
+    <value>Software created by W,Johnson V1.0.0</value>
+  </data>
+  <data name="WaterMarkLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;WaterMarkLabel.Name" xml:space="preserve">
+    <value>WaterMarkLabel</value>
+  </data>
+  <data name="&gt;&gt;WaterMarkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WaterMarkLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WaterMarkLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DefineErrorCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DefineErrorCheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="DefineErrorCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="DefineErrorCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1381, 528</value>
+  </data>
+  <data name="DefineErrorCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="DefineErrorCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 23</value>
+  </data>
+  <data name="DefineErrorCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="DefineErrorCheckBox.Text" xml:space="preserve">
+    <value>Define error tolerance?</value>
+  </data>
+  <data name="DefineErrorCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;DefineErrorCheckBox.Name" xml:space="preserve">
+    <value>DefineErrorCheckBox</value>
+  </data>
+  <data name="&gt;&gt;DefineErrorCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DefineErrorCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DefineErrorCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToleranceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1386, 563</value>
+  </data>
+  <data name="ToleranceTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ToleranceTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ToleranceTextBox.PlaceholderText" xml:space="preserve">
+    <value>5mm</value>
+  </data>
+  <data name="ToleranceTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 27</value>
+  </data>
+  <data name="ToleranceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="ToleranceTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ToleranceTextBox.Name" xml:space="preserve">
+    <value>ToleranceTextBox</value>
+  </data>
+  <data name="&gt;&gt;ToleranceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToleranceTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToleranceTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>29</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1797, 1015</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAAAIADZAgAAVgAAACAgAAAAACAAoQkAAC8DAABAQAAAAAAgAKghAADQDAAAgIAAAAAA
@@ -2534,5 +3554,26 @@
         rySQt4LWBHQtX0PYa7R4kgxdIYdZxZhZoaTayyMuABJPQF6wpZRxKeg7mNi6X+db/x/rlv41VIXP6wAA
         AABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Stake Out Report Generator</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataDialog.Name" xml:space="preserve">
+    <value>BrowseDesignDataDialog</value>
+  </data>
+  <data name="&gt;&gt;BrowseDesignDataDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StakeOutReport</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
