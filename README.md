@@ -32,9 +32,16 @@ The **Stakeout Report Generator** is ideal for:
 
 ## 📦 Installation & Usage
 
+**Release**
+1. Download the ZIP containing the exe from the release section
+2. Unpack the ZIP file to your chosen destination, ensuring the contents of the file are maintained
+3. Run the Exe within and get straight to work
+
+**Building the project yourself**
+
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/StakeoutReportGenerator.git
+    git clone https://github.com/yourusername/Construction-Stake-Out-Report-Generator.git
     ```
 
 2. Open the project in **Visual Studio**.
