@@ -15,10 +15,9 @@
         {
             if (!isValid(e.KeyChar))
             {
-                e.Handled = true; //wont allow us to enter non integers 
+                e.Handled = true; //wont allow us to enter non integers
             }
         }
-
 
         private void ToleranceTextBox_TextChanged(object sender, EventArgs e)
         {

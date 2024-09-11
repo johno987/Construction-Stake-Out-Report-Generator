@@ -1,8 +1,8 @@
-﻿using CsvHelper;
+﻿using System.Globalization;
+using CsvHelper;
 using CsvHelper.Configuration;
-using System.Globalization;
 
-namespace StakeOutReport_WinForms
+namespace StakeOutReport_WinForms.ReadCsvData
 {
     internal class CSVData
     {
@@ -11,7 +11,7 @@ namespace StakeOutReport_WinForms
             List<Point> DesignData = new();
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) //this allows us to read in data with no headers
             {
-                HasHeaderRecord = false
+                HasHeaderRecord = false,
             };
 
             using (var reader = new StreamReader(DesignDataFilePath))
@@ -27,7 +27,7 @@ namespace StakeOutReport_WinForms
             List<Point> AsBuiltData = new();
             var config = new CsvConfiguration(CultureInfo.InvariantCulture) //this allows us to read in data with no headers
             {
-                HasHeaderRecord = false
+                HasHeaderRecord = false,
             };
 
             using (var reader = new StreamReader(AsBuiltDataFilePath))
@@ -38,5 +38,4 @@ namespace StakeOutReport_WinForms
             return AsBuiltData;
         }
     }
-
 }
