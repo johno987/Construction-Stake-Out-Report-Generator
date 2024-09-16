@@ -56,7 +56,7 @@ public partial class StakeOutReport
             .ToList();
     }
 
-    private Point CalculateAndReturnDifference(Point A, Point B)
+    public Point CalculateAndReturnDifference(Point A, Point B)
     {
         //IF A NULL VALUE IS SUBTRACTED FROM A DECIMAL VALUE (IN A VARIABLE THAT CAN BE NULLABLE) THE RESULT WILL BE NULL
         //FOR THIS REASON, THE BELOW RETURN STATEMENT COVERS ALL BASES

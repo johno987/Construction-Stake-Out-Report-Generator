@@ -7,7 +7,7 @@ using NUnit;
 using NUnit.Framework;
 using StakeOutReport_WinForms;
 
-namespace unitTesting;
+namespace StakeOutReport_WinForms.UnitTests;
 
 public class StakeOutReportUnitTesting
 {
@@ -29,10 +29,26 @@ public class StakeOutReportUnitTesting
         StakeOutReport stakeOutReport = new StakeOutReport();
 
         var result = stakeOutReport.Calculate3DError(PointA);
-        
+
         Assert.AreEqual(5387.253m, result);
 
-        //need to roll back the nuget packages to get AreEqual back
+    }
 
+    [Test]
+    public void CalculateAndReturnDifference_ShallReturnCorrectPointValues_ForGivenTwoPoints()
+    {
+        Point PointA = new Point("A", 5, 3, 2);
+        Point PointB = new Point("B", 4, 2, 1);
+
+        StakeOutReport stakeoutReport = new StakeOutReport();
+
+
+        var result = stakeoutReport.CalculateAndReturnDifference(PointA, PointB);
+
+        //Assert the various elements of a point
+        Assert.AreEqual(PointA.PointID , result.PointID, "Incorrect Point ID");
+        Assert.AreEqual(1, result.Easting , "Incorrect Easting Delta, should be 1");
+        Assert.AreEqual(1, result.Northing, "Incorrect Northing Delta, should be 1");
+        Assert.AreEqual(1, result.Level, "Incorrect Level Detla, should be 1");
     }
 }
