@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit;
-using NUnit.Framework;
-using StakeOutReport_WinForms;
+﻿using NUnit.Framework;
 
 namespace StakeOutReport_WinForms.UnitTests;
 
@@ -34,21 +27,27 @@ public class StakeOutReportUnitTesting
 
     }
 
-    [Test]
-    public void CalculateAndReturnDifference_ShallReturnCorrectPointValues_ForGivenTwoPoints()
+    [TestCaseSource(nameof(GeneratePointDataForTest))]
+    public void CalculateAndReturnDifference_ShallReturnCorrectPointValues_ForGivenTwoPoints(IEnumerable<Point> collection, Point Expected)
     {
-        Point PointA = new Point("A", 5, 3, 2);
-        Point PointB = new Point("B", 4, 2, 1);
-
+        var inputCollection = collection.ToList();
         StakeOutReport stakeoutReport = new StakeOutReport();
 
+        var result = stakeoutReport.CalculateAndReturnDifference(inputCollection[0], inputCollection[1]);
 
-        var result = stakeoutReport.CalculateAndReturnDifference(PointA, PointB);
+        bool AsExpected = Expected.Equals(result);
 
-        //Assert the various elements of a point
-        Assert.AreEqual(PointA.PointID , result.PointID, "Incorrect Point ID");
-        Assert.AreEqual(1, result.Easting , "Incorrect Easting Delta, should be 1");
-        Assert.AreEqual(1, result.Northing, "Incorrect Northing Delta, should be 1");
-        Assert.AreEqual(1, result.Level, "Incorrect Level Detla, should be 1");
+        Assert.AreEqual(Expected, result);
+
+    }
+
+    static private IEnumerable<object> GeneratePointDataForTest()
+    {
+        return new[]
+            {
+                new object[]{ new List<Point> { new Point("A", 5, 3, 2), new Point("B", 4, 2, 1) }, new Point("A", 1, 1, 1) }, //one test case - 2 points and the resulting point value (overridden equals and get hash code)
+                new object[]{ new List<Point> { new Point("A", 10, 5, 3), new Point("B", 7, 3, 2) }, new Point("A", 3, 2, 1) },
+                new object[]{ new List<Point> { new Point("A", 20, 15, 10), new Point("B", 8, 5, 3) }, new Point("A", 12, 10, 7) }
+            };
     }
 }

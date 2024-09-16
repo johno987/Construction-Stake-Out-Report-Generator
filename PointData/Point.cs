@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration.Attributes;
 
-public record Point
+public class Point
 {
     [Index(0)]
     public string PointID { get; init; }
@@ -23,9 +23,23 @@ public record Point
         Northing = north;
         Level = height;
     }
+
+    public override bool Equals(object? obj)
+    {
+        return obj is Point point &&
+               PointID == point.PointID &&
+               Easting == point.Easting &&
+               Northing == point.Northing &&
+               Level == point.Level;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(PointID, Easting, Northing, Level);
+    }
 }
 
-public record PointError3D : Point //seperate class that adds on the error property
+public class PointError3D : Point //seperate class that adds on the error property
 {
     [Index(4)]
     public decimal? Error { get; init; }
