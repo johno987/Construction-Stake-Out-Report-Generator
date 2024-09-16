@@ -68,7 +68,7 @@ public partial class StakeOutReport
         );
     }
 
-    private decimal? Calculate3DError(Point A)
+    public decimal? Calculate3DError(Point A)
     {
         if (A.Easting != null && A.Northing != null && A.Level != null)
         {
@@ -85,7 +85,7 @@ public partial class StakeOutReport
         return null;
     }
 
-    private decimal? Calculate2DError(Point A)
+    public decimal? Calculate2DError(Point A)
     {
         if (A.Easting != null && A.Northing != null && A.Level != null)
         {
