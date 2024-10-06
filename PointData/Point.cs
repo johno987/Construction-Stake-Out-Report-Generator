@@ -26,11 +26,11 @@ public class Point
 
     public override bool Equals(object? obj)
     {
-        return obj is Point point &&
-               PointID == point.PointID &&
-               Easting == point.Easting &&
-               Northing == point.Northing &&
-               Level == point.Level;
+        return obj is Point point
+            && PointID == point.PointID
+            && Easting == point.Easting
+            && Northing == point.Northing
+            && Level == point.Level;
     }
 
     public override int GetHashCode()

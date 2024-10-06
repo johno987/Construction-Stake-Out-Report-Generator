@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace StakeOutReport_WinForms;
 
@@ -280,6 +281,9 @@ public partial class StakeOutReport
                 DesignRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                 AsBuiltRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
+                //testing
+                GeneratePointToBeStakedWorkSheet(workbook);
+
                 // Save the workbook
                 workbook.SaveAs(filePath);
             }
@@ -298,5 +302,36 @@ public partial class StakeOutReport
 
         //MESSAGE USER CONFIRMING SUCCESSFULLY CREATED EXCEL SHEET
         MessageBox.Show("Exccel Report Created!", "Report Success", MessageBoxButtons.OK);
+    }
+
+    private void GenerateMainWorkSheet()
+    {
+        //move main function into here
+    }
+
+    private void GeneratePointToBeStakedWorkSheet(XLWorkbook workbook)
+    {
+        //get IEnumerable of relevant points
+        var points = ErrorWith3D.Where(x => x.Easting == null);
+        var count = points.Count();
+        if (count == 0) //if no points, dont create the 2nd worksheet
+            return;
+
+        var worksheet = workbook.AddWorksheet("Points Left To Be Staked");
+
+        worksheet.Column(1).Width = 22.30;
+
+        //add header data and format
+        var A1 = worksheet.Cell("A1");
+        A1.Value = "Point List";
+        A1.Style.Font.Bold = true;
+        A1.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+        //read data in
+        var pointrange = worksheet.Cell("A2").InsertData(points.Select(x => x.PointID).ToList());
+
+        //format the data
+        var dataRange = worksheet.Range($"A2:A{count + 1}").Style.Alignment.Horizontal =
+            XLAlignmentHorizontalValues.Center;
     }
 }
