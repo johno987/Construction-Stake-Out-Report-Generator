@@ -24,16 +24,31 @@ public partial class StakeOutReport
 
     private void StoreErrorInPoints()
     {
+        //LINQ using structs
         var differences =
-            from designPoint in DesignData
-            join asBuiltPoint in AsBuiltData
-                on AsBuiltPrefixSelection + designPoint.PointID equals asBuiltPoint.PointID
-                into gj
-            from subAsBuiltPoint in gj.DefaultIfEmpty()
-            select CalculateAndReturnDifference(
-                designPoint,
-                subAsBuiltPoint ?? new Point { PointID = designPoint.PointID }
-            );
+    from designPoint in DesignData
+    join asBuiltPoint in AsBuiltData
+        on AsBuiltPrefixSelection + designPoint.PointID equals asBuiltPoint.PointID
+        into gj
+    from subAsBuiltPoint in gj.DefaultIfEmpty()
+    select CalculateAndReturnDifference(
+        designPoint,
+        subAsBuiltPoint // No need for ?? with structs as they are non-nullable
+    );
+
+
+
+        //LINQ using classes
+        //var differences =
+        //    from designPoint in DesignData
+        //    join asBuiltPoint in AsBuiltData
+        //        on AsBuiltPrefixSelection + designPoint.PointID equals asBuiltPoint.PointID
+        //        into gj
+        //    from subAsBuiltPoint in gj.DefaultIfEmpty()
+        //    select CalculateAndReturnDifference(
+        //        designPoint,
+        //        subAsBuiltPoint ?? new Point { PointID = designPoint.PointID }
+        //    );
 
         ErrorInPoints.AddRange(differences); //first add the difference in points into here
 

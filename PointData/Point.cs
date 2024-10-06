@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration.Attributes;
 
-public class Point
+public struct Point
 {
     [Index(0)]
     public string PointID { get; init; }
@@ -39,14 +39,28 @@ public class Point
     }
 }
 
-public class PointError3D : Point //seperate class that adds on the error property
+public struct PointError3D //seperate class that adds on the error property
 {
+    [Index(1)]
+    public string PointID { get; init; }
+
+    [Index(2)]
+    public decimal? Easting { get; init; }
+
+    [Index(3)]
+    public decimal? Northing { get; init; }
+
     [Index(4)]
+    public decimal? Level { get; init; }
+    [Index(5)]
     public decimal? Error { get; init; }
 
     public PointError3D(string id, decimal? east, decimal? north, decimal? height, decimal? Error)
-        : base(id, east, north, height)
     {
+        this.PointID = id;
+        this.Easting = east;
+        this.Northing = north;
+        this.Level = height;
         this.Error = Error;
     }
 
