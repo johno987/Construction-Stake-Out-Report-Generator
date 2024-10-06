@@ -9,6 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>retro_construction_target_icon.ico</ApplicationIcon>
     <StartupObject>StakeOutReport_WinForms.Program</StartupObject>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
   </PropertyGroup>
 
   <ItemGroup>

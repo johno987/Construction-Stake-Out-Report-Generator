@@ -301,7 +301,7 @@ public partial class StakeOutReport
         }
 
         //MESSAGE USER CONFIRMING SUCCESSFULLY CREATED EXCEL SHEET
-        MessageBox.Show("Exccel Report Created!", "Report Success", MessageBoxButtons.OK);
+        MessageBox.Show("Excel Report Created!", "Report Success", MessageBoxButtons.OK);
     }
 
     private void GenerateMainWorkSheet()

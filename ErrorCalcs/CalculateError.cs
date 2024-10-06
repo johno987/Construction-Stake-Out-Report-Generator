@@ -37,19 +37,6 @@ public partial class StakeOutReport
     );
 
 
-
-        //LINQ using classes
-        //var differences =
-        //    from designPoint in DesignData
-        //    join asBuiltPoint in AsBuiltData
-        //        on AsBuiltPrefixSelection + designPoint.PointID equals asBuiltPoint.PointID
-        //        into gj
-        //    from subAsBuiltPoint in gj.DefaultIfEmpty()
-        //    select CalculateAndReturnDifference(
-        //        designPoint,
-        //        subAsBuiltPoint ?? new Point { PointID = designPoint.PointID }
-        //    );
-
         ErrorInPoints.AddRange(differences); //first add the difference in points into here
 
         ErrorWith3D = ErrorInPoints

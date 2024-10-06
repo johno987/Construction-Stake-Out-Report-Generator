@@ -191,7 +191,7 @@ public partial class StakeOutReport
                                 .AlignLeft()
                                 .AlignMiddle()
                                 .PaddingLeft(10)
-                                .Text("Stake Out Report.\nSoftware created By W.Johnson\nV1.0.0")
+                                .Text($"Stake Out Report.\nSoftware created By W.Johnson\n{SoftwareVersion}")
                                 .FontSize(10)
                                 .Italic();
 

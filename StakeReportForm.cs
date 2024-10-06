@@ -1,3 +1,4 @@
+
 namespace StakeOutReport_WinForms;
 
 public partial class StakeOutReport : Form
@@ -10,11 +11,18 @@ public partial class StakeOutReport : Form
     string? ProjectTitle;
     string? ElementOfWorks;
     decimal? DefinedErrorTolerance;
+    const string SoftwareVersion = "V1.0.2";
 
     public StakeOutReport()
     {
         InitializeComponent();
         SetCurrentDate();
         InitialiseComboBox();
+        SetSoftwareVersion();
+    }
+
+    private void SetSoftwareVersion()
+    {
+        WaterMarkLabel.Text = $"Software created By W.Johnson\n{SoftwareVersion}";
     }
 }
