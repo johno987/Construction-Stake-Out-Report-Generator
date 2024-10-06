@@ -183,56 +183,9 @@ public partial class StakeOutReport
                 var errorRange = worksheet.Cell("A6").InsertData(ErrorWith3D);
                 var DesignRange = worksheet.Cell("G6").InsertData(DesignData);
                 var AsBuiltRange = worksheet.Cell("L6").InsertData(AsBuiltData);
+               
 
-                //NEED TO REORDER THE FIRST TABLE SHOWING THE ERROR
-                #region ReorderingColumns
-                //var ColARangeData = worksheet.Range($"A6:A{6 + ErrorWith3D.Count}");
-                //var ColBRangeData = worksheet.Range($"B6:B{6 + ErrorWith3D.Count}");
-                //var ColCRangeData = worksheet.Range($"C6:C{6 + ErrorWith3D.Count}");
-                //var ColDRangeData = worksheet.Range($"D6:D{6 + ErrorWith3D.Count}");
-                //var ColERangeData = worksheet.Range($"E6:E{6 + ErrorWith3D.Count}");
-
-                //var targetCellA = worksheet.Cell("A6"); //col A
-                //var targetCellB = worksheet.Cell("B6"); //col B
-                //var targetCellC = worksheet.Cell("C6"); //Col C
-                //var targetCellD = worksheet.Cell("D6"); //col D
-                //var targetCellE = worksheet.Cell("E6"); //col E
-
-                ////COPY THE DATA OUTSIDE THE RANGE OF THE WORKSHEET
-
-                //var targetCellR = worksheet.Cell("R6"); //col R
-                //var targetCellS = worksheet.Cell("S6"); //col S
-                //var targetCellT = worksheet.Cell("T6"); //Col T
-                //var targetCellU = worksheet.Cell("U6"); //col U
-                //var targetCellV = worksheet.Cell("V6"); //col V
-
-                //ColBRangeData.CopyTo(targetCellR);
-                //ColARangeData.CopyTo(targetCellV);
-                //ColCRangeData.CopyTo(targetCellS);
-                //ColDRangeData.CopyTo(targetCellT);
-                //ColERangeData.CopyTo(targetCellU);
-
-                ////NOW MOVE IT BACK INTO THE CORRECT CELLS FROM TABLE 1
-                //var ColRRangeData = worksheet.Range($"R6:R{6 + ErrorWith3D.Count}");
-                //var ColSRangeData = worksheet.Range($"S6:S{6 + ErrorWith3D.Count}");
-                //var ColTRangeData = worksheet.Range($"T6:T{6 + ErrorWith3D.Count}");
-                //var ColURangeData = worksheet.Range($"U6:U{6 + ErrorWith3D.Count}");
-                //var ColVRangeData = worksheet.Range($"V6:V{6 + ErrorWith3D.Count}");
-
-                //ColRRangeData.CopyTo(targetCellA);
-                //ColSRangeData.CopyTo(targetCellB);
-                //ColTRangeData.CopyTo(targetCellC);
-                //ColURangeData.CopyTo(targetCellD);
-                //ColVRangeData.CopyTo(targetCellE);
-
-                ////NOW DELETE THE TEMPORARY STORAGE COLUMNS
-                //ColRRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-                //ColSRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-                //ColTRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-                //ColURangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-                //ColVRangeData.Delete(XLShiftDeletedCells.ShiftCellsLeft);
-
-                //NOW GET THE RANGE OF CELLS THAT CONTAIN THE ERROR COLUMN
+                //NOW GET THE RANGE OF CELLS THAT CONTAIN THE ERROR COLUMN AND SET THE ERROR COLOUR
                 if (DefineErrorCheckBox.Checked && !string.IsNullOrEmpty(ToleranceTextBox.Text))
                 {
                     var ErrorRangeData = worksheet.Range($"E6:E{6 + ErrorWith3D.Count - 1}");
@@ -251,7 +204,6 @@ public partial class StakeOutReport
                     }
                 }
 
-                #endregion;
 
                 //IF 2D ERROR OPTION IS SELECTED, N/A WILL BE APPENDED TO THE DIFFERENCE IN ELEVATION COLUMN TO SHOW IT IS NOT BEING USED WITHIN THE ERROR CALC
                 if (Error2DCheckBox.Checked) //TEMP
