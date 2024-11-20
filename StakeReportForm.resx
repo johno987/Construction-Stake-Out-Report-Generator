@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -126,10 +126,10 @@
     <value>Arial, 15pt, style=Underline</value>
   </data>
   <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 12</value>
+    <value>12, 9</value>
   </data>
   <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 28</value>
+    <value>337, 23</value>
   </data>
   <data name="TitleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -156,10 +156,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="BrowseDesignDataLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 76</value>
+    <value>12, 57</value>
   </data>
   <data name="BrowseDesignDataLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 19</value>
+    <value>165, 16</value>
   </data>
   <data name="BrowseDesignDataLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -186,10 +186,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 188</value>
+    <value>12, 141</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 19</value>
+    <value>168, 16</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -210,17 +210,13 @@
     <value>29</value>
   </data>
   <data name="DesignDataFilePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 117</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DesignDataFilePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>176, 88</value>
   </data>
   <data name="DesignDataFilePathTextBox.PlaceholderText" xml:space="preserve">
     <value>Design Data File Path</value>
   </data>
   <data name="DesignDataFilePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 27</value>
+    <value>489, 23</value>
   </data>
   <data name="DesignDataFilePathTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -238,16 +234,13 @@
     <value>28</value>
   </data>
   <data name="AsBuiltDataFilePathTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 235</value>
-  </data>
-  <data name="AsBuiltDataFilePathTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>176, 176</value>
   </data>
   <data name="AsBuiltDataFilePathTextBox.PlaceholderText" xml:space="preserve">
     <value>As-Built Data File Path</value>
   </data>
   <data name="AsBuiltDataFilePathTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 27</value>
+    <value>489, 23</value>
   </data>
   <data name="AsBuiltDataFilePathTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -268,13 +261,10 @@
     <value>17, 17</value>
   </metadata>
   <data name="BrowseDesignDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 117</value>
-  </data>
-  <data name="BrowseDesignDataButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>25, 88</value>
   </data>
   <data name="BrowseDesignDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 31</value>
+    <value>127, 23</value>
   </data>
   <data name="BrowseDesignDataButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -295,13 +285,10 @@
     <value>26</value>
   </data>
   <data name="BrowseAsBuiltData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 235</value>
-  </data>
-  <data name="BrowseAsBuiltData.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>25, 176</value>
   </data>
   <data name="BrowseAsBuiltData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 31</value>
+    <value>127, 23</value>
   </data>
   <data name="BrowseAsBuiltData.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -322,13 +309,10 @@
     <value>25</value>
   </data>
   <data name="ConfirmChoiceAndReadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 464</value>
-  </data>
-  <data name="ConfirmChoiceAndReadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>12, 348</value>
   </data>
   <data name="ConfirmChoiceAndReadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 47</value>
+    <value>174, 35</value>
   </data>
   <data name="ConfirmChoiceAndReadButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -355,10 +339,10 @@
     <value>Arial, 12pt</value>
   </data>
   <data name="ReadStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 543</value>
+    <value>21, 407</value>
   </data>
   <data name="ReadStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 23</value>
+    <value>108, 18</value>
   </data>
   <data name="ReadStatusLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -379,16 +363,13 @@
     <value>23</value>
   </data>
   <data name="DesignDataTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>950, 117</value>
-  </data>
-  <data name="DesignDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>831, 88</value>
   </data>
   <data name="DesignDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="DesignDataTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 265</value>
+    <value>333, 199</value>
   </data>
   <data name="DesignDataTable.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -406,16 +387,13 @@
     <value>22</value>
   </data>
   <data name="AsBuiltDataTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1350, 117</value>
-  </data>
-  <data name="AsBuiltDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>1181, 88</value>
   </data>
   <data name="AsBuiltDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="AsBuiltDataTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 265</value>
+    <value>333, 199</value>
   </data>
   <data name="AsBuiltDataTable.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -439,10 +417,10 @@
     <value>Segoe UI, 9pt, style=Underline</value>
   </data>
   <data name="DesignDataPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>950, 93</value>
+    <value>831, 70</value>
   </data>
   <data name="DesignDataPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 20</value>
+    <value>114, 15</value>
   </data>
   <data name="DesignDataPreviewLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -472,10 +450,10 @@
     <value>Segoe UI, 9pt, style=Underline</value>
   </data>
   <data name="AsBuiltDataPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1350, 93</value>
+    <value>1181, 70</value>
   </data>
   <data name="AsBuiltDataPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
+    <value>120, 15</value>
   </data>
   <data name="AsBuiltDataPreviewLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -505,10 +483,10 @@
     <value>Segoe UI, 11pt, style=Bold</value>
   </data>
   <data name="CurrentDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1655, 16</value>
+    <value>1448, 12</value>
   </data>
   <data name="CurrentDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 25</value>
+    <value>125, 20</value>
   </data>
   <data name="CurrentDate.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -532,13 +510,10 @@
     <value>18</value>
   </data>
   <data name="CalculateErrorButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>950, 416</value>
-  </data>
-  <data name="CalculateErrorButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>831, 312</value>
   </data>
   <data name="CalculateErrorButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 47</value>
+    <value>174, 35</value>
   </data>
   <data name="CalculateErrorButton.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -568,10 +543,10 @@
     <value>Segoe UI, 9pt, style=Underline</value>
   </data>
   <data name="ErrorPreviewLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>950, 491</value>
+    <value>831, 368</value>
   </data>
   <data name="ErrorPreviewLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>76, 15</value>
   </data>
   <data name="ErrorPreviewLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -598,16 +573,13 @@
     <value>15</value>
   </data>
   <data name="ErrorPreviewDataTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>950, 528</value>
-  </data>
-  <data name="ErrorPreviewDataTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>831, 396</value>
   </data>
   <data name="ErrorPreviewDataTable.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="ErrorPreviewDataTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 368</value>
+    <value>333, 276</value>
   </data>
   <data name="ErrorPreviewDataTable.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -628,13 +600,10 @@
     <value>16</value>
   </data>
   <data name="PrefixSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 308</value>
-  </data>
-  <data name="PrefixSelector.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>228, 231</value>
   </data>
   <data name="PrefixSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 28</value>
+    <value>85, 23</value>
   </data>
   <data name="PrefixSelector.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -658,10 +627,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="AsBuiltPrefixLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 311</value>
+    <value>2, 233</value>
   </data>
   <data name="AsBuiltPrefixLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 19</value>
+    <value>201, 16</value>
   </data>
   <data name="AsBuiltPrefixLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -682,10 +651,7 @@
     <value>13</value>
   </data>
   <data name="CustomPrefixTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 375</value>
-  </data>
-  <data name="CustomPrefixTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>12, 281</value>
   </data>
   <data name="CustomPrefixTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -694,7 +660,7 @@
     <value>Custom</value>
   </data>
   <data name="CustomPrefixTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 27</value>
+    <value>301, 23</value>
   </data>
   <data name="CustomPrefixTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -724,13 +690,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="PDFCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 675</value>
-  </data>
-  <data name="PDFCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>21, 506</value>
   </data>
   <data name="PDFCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
+    <value>52, 20</value>
   </data>
   <data name="PDFCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -760,10 +723,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="ReportOptionsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 628</value>
+    <value>12, 471</value>
   </data>
   <data name="ReportOptionsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 19</value>
+    <value>122, 16</value>
   </data>
   <data name="ReportOptionsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -796,13 +759,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="CSVCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 731</value>
-  </data>
-  <data name="CSVCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>21, 548</value>
   </data>
   <data name="CSVCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
+    <value>53, 20</value>
   </data>
   <data name="CSVCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -826,13 +786,10 @@
     <value>9</value>
   </data>
   <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 965</value>
-  </data>
-  <data name="GenerateReportButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>6, 724</value>
   </data>
   <data name="GenerateReportButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 47</value>
+    <value>174, 35</value>
   </data>
   <data name="GenerateReportButton.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -856,10 +813,7 @@
     <value>8</value>
   </data>
   <data name="ProjectNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 821</value>
-  </data>
-  <data name="ProjectNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>12, 616</value>
   </data>
   <data name="ProjectNameTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>30</value>
@@ -868,7 +822,7 @@
     <value>Project Title</value>
   </data>
   <data name="ProjectNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 27</value>
+    <value>489, 23</value>
   </data>
   <data name="ProjectNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -895,10 +849,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="ProjectNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 781</value>
+    <value>12, 586</value>
   </data>
   <data name="ProjectNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 19</value>
+    <value>91, 16</value>
   </data>
   <data name="ProjectNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -922,10 +876,7 @@
     <value>7</value>
   </data>
   <data name="ElementOfWorksTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 915</value>
-  </data>
-  <data name="ElementOfWorksTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>12, 686</value>
   </data>
   <data name="ElementOfWorksTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>100</value>
@@ -934,7 +885,7 @@
     <value>Works Set Out</value>
   </data>
   <data name="ElementOfWorksTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 27</value>
+    <value>489, 23</value>
   </data>
   <data name="ElementOfWorksTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -961,10 +912,10 @@
     <value>Arial, 10pt, style=Underline</value>
   </data>
   <data name="ElementOfWorksLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 875</value>
+    <value>12, 656</value>
   </data>
   <data name="ElementOfWorksLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 19</value>
+    <value>121, 16</value>
   </data>
   <data name="ElementOfWorksLabel.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -997,13 +948,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="Error2DCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1195, 427</value>
-  </data>
-  <data name="Error2DCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>1046, 320</value>
   </data>
   <data name="Error2DCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 23</value>
+    <value>244, 20</value>
   </data>
   <data name="Error2DCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -1030,10 +978,10 @@
     <value>Arial, 8.25pt, style=Underline</value>
   </data>
   <data name="WaterMarkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1585, 952</value>
+    <value>1387, 714</value>
   </data>
   <data name="WaterMarkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 51</value>
+    <value>173, 38</value>
   </data>
   <data name="WaterMarkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -1066,13 +1014,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="DefineErrorCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1381, 528</value>
-  </data>
-  <data name="DefineErrorCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>1208, 396</value>
   </data>
   <data name="DefineErrorCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 23</value>
+    <value>156, 20</value>
   </data>
   <data name="DefineErrorCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -1096,10 +1041,7 @@
     <value>1</value>
   </data>
   <data name="ToleranceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1386, 563</value>
-  </data>
-  <data name="ToleranceTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>1213, 422</value>
   </data>
   <data name="ToleranceTextBox.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1108,7 +1050,7 @@
     <value>5mm</value>
   </data>
   <data name="ToleranceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 27</value>
+    <value>77, 23</value>
   </data>
   <data name="ToleranceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1135,14 +1077,14 @@
     <value>29</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+    <value>7, 15</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1797, 1015</value>
+    <value>1572, 761</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3554,9 +3496,6 @@
         rySQt4LWBHQtX0PYa7R4kgxdIYdZxZhZoaTayyMuABJPQF6wpZRxKeg7mNi6X+db/x/rlv41VIXP6wAA
         AABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
